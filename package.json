@@ -1,0 +1,31 @@
+{
+  "name": "stylewars",
+  "version": "0.1.0",
+  "description": "The simples possible css-in-js library",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "prettier --check **/*.{md,js}"
+  },
+  "keywords": [
+    "css",
+    "css-in-js",
+    "styles"
+  ],
+  "author": "Sune Simonsen",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^16.4.0",
+    "magicpen-prism": "^4.1.1",
+    "mocha": "^8.2.1",
+    "mocha-dominate": "^1.0.0",
+    "prettier": "^2.2.1",
+    "unexpected": "^12.0.0",
+    "unexpected-dom": "^5.0.0",
+    "unexpected-snapshot": "^1.1.0"
+  },
+  "dependencies": {
+    "@gustavnikolaj/string-utils": "^2.0.0",
+    "insert-css": "^2.0.0"
+  }
+}
