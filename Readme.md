@@ -5,11 +5,11 @@
 
 A tiny CSS in JS library that requires no tooling.
 
-Just define your CSS in JS and apply them - you don't need to think about
-anything.
+Just define your CSS rules and apply them.
 
 - Easy learning curve
 - Only one concept on top of CSS
+- Gives you all of the power of CSS
 - Framework agnostic
 - Unique class names
 
