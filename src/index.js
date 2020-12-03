@@ -1,5 +1,5 @@
-const insertCss = require("insert-css");
-const deindent = require("@gustavnikolaj/string-utils/deindent");
+import insertCss from "insert-css";
+import deindent from "@gustavnikolaj/string-utils/deindent";
 
 const hashesByContainer = new Map();
 
@@ -58,7 +58,7 @@ const appendCSSRules = (cssRules) => {
   }
 };
 
-const css = (strings, ...values) => {
+export const css = (strings, ...values) => {
   let template = strings[0];
 
   for (var i = 0; i < values.length; i++) {
@@ -69,7 +69,7 @@ const css = (strings, ...values) => {
   return new CSSTemplate(template);
 };
 
-const classes = (...args) => {
+export const classes = (...args) => {
   const values = Array.from(args).filter(Boolean);
 
   const classNames = values.filter((v) => typeof v === "string");
@@ -84,5 +84,3 @@ const classes = (...args) => {
 
   return classNames.join(" ");
 };
-
-module.exports = { css, classes };

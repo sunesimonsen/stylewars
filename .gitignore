@@ -2,6 +2,7 @@
 .idea
 *.log
 tmp/
+dist/
 
 *.tern-port
 node_modules/
