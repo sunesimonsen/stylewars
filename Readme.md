@@ -2,7 +2,6 @@
 
 [![Bundle Sise](https://flat.badgen.net/bundlephobia/minzip/stylewars)](https://bundlephobia.com/result?p=stylewars)
 
-
 A tiny CSS in JS library that requires no tooling.
 
 Just define your CSS in JS and apply them - you don't need to think about
@@ -12,7 +11,6 @@ anything.
 - Only one concept on top of CSS
 - Framework agnostic
 - Unique class names
-
 
 [![Style Wars (1983)](https://i.ytimg.com/vi/f9KxbaSU-Eo/hqdefault.jpg)](https://www.youtube.com/embed/f9KxbaSU-Eo)
 

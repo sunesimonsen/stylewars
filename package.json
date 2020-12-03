@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
-    "format": "prettier --write **/*.{md,js}",
+    "format": "prettier --write **/*.{md,js,json}",
     "build": "rollup -c rollup.config.js",
     "preversion": "npm run lint && npm run test",
     "prepublishOnly": "npm run build",
