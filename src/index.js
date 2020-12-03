@@ -6,10 +6,10 @@ const hashesByContainer = new Map();
 function stringToHash(string) {
   var hash = 0;
 
-  if (string.length == 0) return hash;
+  if (string.length === 0) return hash;
 
-  for (i = 0; i < string.length; i++) {
-    char = string.charCodeAt(i);
+  for (let i = 0; i < string.length; i++) {
+    const char = string.charCodeAt(i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
@@ -22,7 +22,7 @@ class CSSRules {
   constructor(templateString) {
     this.template = templateString;
     this.hash = stringToHash(this.template);
-    this.content = this.template.replace(/\&/g, `.${this.hash}`);
+    this.content = this.template.replace(/&/g, `.${this.hash}`);
   }
 
   toString() {
