@@ -53,5 +53,11 @@
   "dependencies": {
     "@gustavnikolaj/string-utils": "^2.0.0",
     "insert-css": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
