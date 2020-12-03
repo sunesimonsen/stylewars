@@ -1,7 +1,7 @@
 {
   "name": "stylewars",
   "version": "0.1.0",
-  "description": "The simples possible css-in-js library",
+  "description": "A tiny CSS in JS library that requires no tooling",
   "main": "dist/bundle.cjs.js",
   "module": "dist/index.esm.js",
   "scripts": {
