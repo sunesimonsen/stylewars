@@ -1,5 +1,8 @@
 # Stylewars
 
+[![Bundle Sise](https://flat.badgen.net/bundlephobia/minzip/stylewars)](https://bundlephobia.com/result?p=stylewars)
+
+
 A tiny CSS in JS library that requires no tooling.
 
 Just define your CSS in JS and apply them - you don't need to think about
