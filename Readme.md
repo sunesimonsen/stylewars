@@ -54,6 +54,8 @@ const BoringButton = ({ children, ...other }) => (
 As you can see it is just plain CSS with one exception `&` will be replaced by a
 unique class.
 
+### Using placeholders
+
 You can also use placeholders to generate classes dynamically.
 
 ```js
@@ -83,6 +85,8 @@ Just make sure only to use this method for a limited amount of values as it
 generates new classes. Alternatively you can use [CSS
 variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
 
+### Using global classes
+
 If you need to apply a global class, it can be done this way:
 
 ```js
@@ -96,7 +100,9 @@ const GloballyStyldedButton = ({ color, children, ...other }) => (
 );
 ```
 
-You can optionally apply styles this way:
+### Conditional styling
+
+You can conditional apply styles this way:
 
 ```js
 const MaybeColoredButton = ({ color, children, ...other }) => (
