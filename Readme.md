@@ -30,7 +30,7 @@ together with any framework.
 import React from "react";
 import { css, classes } from "stylewars";
 
-const button = css`
+const buttonStyles = css`
   & {
     border-radius: 4px;
     background: #587894;
@@ -45,7 +45,7 @@ const button = css`
 `;
 
 const BoringButton = ({ children, ...other }) => (
-  <button {...other} className={classes(button)}>
+  <button {...other} className={classes(buttonStyles)}>
     {children}
   </button>
 );
@@ -59,7 +59,7 @@ You can also use placeholders to generate classes dynamically.
 ```js
 import { lighten } from "polished";
 
-const coloredButton = (color) => css`
+const coloredBackground = (color) => css`
   & {
     background: ${color};
   }
@@ -70,7 +70,10 @@ const coloredButton = (color) => css`
 `;
 
 const FancyButton = ({ color, children, ...other }) => (
-  <button {...other} className={classes(button, coloredButton(color))}>
+  <button
+    {...other}
+    className={classes(buttonStyles, coloredBackground(color))}
+  >
     {children}
   </button>
 );
@@ -84,7 +87,10 @@ If you need to apply a global class, it can be done this way:
 
 ```js
 const GloballyStyldedButton = ({ color, children, ...other }) => (
-  <button {...other} className={classes("global-class", coloredButton(color))}>
+  <button
+    {...other}
+    className={classes("global-class", coloredBackground(color))}
+  >
     {children}
   </button>
 );
@@ -94,7 +100,10 @@ You can optionally apply styles this way:
 
 ```js
 const MaybeColoredButton = ({ color, children, ...other }) => (
-  <button {...other} className={classes(button, color && coloredButton(color))}>
+  <button
+    {...other}
+    className={classes(buttonStyles, color && coloredBackground(color))}
+  >
     {children}
   </button>
 );
