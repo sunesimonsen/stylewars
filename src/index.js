@@ -1,5 +1,4 @@
 import insertCss from "insert-css";
-import deindent from "@gustavnikolaj/string-utils/deindent";
 
 const hashesByContainer = new Map();
 
@@ -14,15 +13,68 @@ function stringToHash(string) {
     hash = hash & hash;
   }
 
-  const hashString = Math.abs(hash).toString(16);
-  return hashString.match(/^[0-9]/) ? `c${hashString}` : hashString;
+  return hash;
 }
 
-class CSSRules {
-  constructor(templateString) {
-    this.template = templateString;
-    this.hash = stringToHash(this.template);
-    this.content = this.template.replace(/&/g, `.${this.hash}`);
+const pairs = {
+  '"': '"',
+  "'": "'",
+  "{": "}",
+};
+
+class CSSTemplate {
+  constructor(content, hash = stringToHash(content)) {
+    this.content = content;
+    this.hash = hash;
+    this._rendered = null;
+
+    const hashString = Math.abs(this.hash).toString(16);
+    this.hashString = hashString.match(/^[0-9]/)
+      ? `c${hashString}`
+      : hashString;
+  }
+
+  render() {
+    if (typeof this._rendered === "string") {
+      return this._rendered;
+    }
+
+    let result = "";
+    let close = null;
+    const tokens = this.content.split(/([:;{}&]|\\?["']|\\)/g).filter(Boolean);
+
+    for (let i = 0; i < tokens.length; i++) {
+      const token = tokens[i];
+
+      if (close) {
+        if (token.match(close)) {
+          close = null;
+        }
+        result += token;
+        continue;
+      }
+
+      close = pairs[token];
+
+      if (close) {
+        result += token;
+      } else if (token === "&") {
+        result += `.${this.hashString}`;
+      } else {
+        result += token;
+      }
+    }
+
+    this._rendered = result;
+    return this._rendered;
+  }
+
+  combine(template) {
+    const content = this.content + " " + template.content;
+    let hash = 17;
+    hash = hash * 37 + this.hash;
+    hash = hash * 37 + template.hash;
+    return new CSSTemplate(content, hash);
   }
 
   toString() {
@@ -30,17 +82,7 @@ class CSSRules {
   }
 }
 
-class CSSTemplate {
-  constructor(content) {
-    this.content = deindent(content);
-  }
-
-  toString() {
-    return this.content;
-  }
-}
-
-const appendCSSRules = (cssRules) => {
+const appendCSSToDocument = (template) => {
   if (typeof document !== "undefined") {
     const container = document.querySelector("head");
 
@@ -51,9 +93,9 @@ const appendCSSRules = (cssRules) => {
       hashesByContainer.set(container, hashes);
     }
 
-    if (!hashes.has(cssRules.hash)) {
-      insertCss((first ? "" : "\n") + cssRules.content);
-      hashes.add(cssRules.hash);
+    if (!hashes.has(template.hash)) {
+      insertCss((first ? "" : " ") + template.render());
+      hashes.add(template.hash);
     }
   }
 };
@@ -66,7 +108,7 @@ export const css = (strings, ...values) => {
     template += strings[i + 1];
   }
 
-  return new CSSTemplate(template);
+  return new CSSTemplate(template.replace(/\s*\n+\s*/g, ""));
 };
 
 export const classes = (...args) => {
@@ -74,13 +116,17 @@ export const classes = (...args) => {
 
   const classNames = values.filter((v) => typeof v === "string");
 
-  const template = values.filter((v) => v instanceof CSSTemplate).join("\n");
+  const templates = values.filter((v) => v instanceof CSSTemplate);
 
-  const cssRules = new CSSRules(template);
+  if (templates.length > 0) {
+    const template = templates.reduce((combined, template) =>
+      combined.combine(template)
+    );
 
-  appendCSSRules(cssRules);
+    appendCSSToDocument(template);
 
-  classNames.push(cssRules.hash);
+    classNames.push(template.hashString);
+  }
 
   return classNames.join(" ");
 };

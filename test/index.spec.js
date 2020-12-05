@@ -24,17 +24,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c5c008d7a");
+    expect(cn, "to equal snapshot", "c25682abe");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c5c008d7a {
-          background: red;
-        }
-      `
+      ".c25682abe {background: red;}"
     );
   });
 
@@ -51,21 +47,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c43aef101");
+    expect(cn, "to equal snapshot", "c15455a55");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c43aef101 {
-          background: red;
-        }
-
-        .c43aef101:hover {
-          background: blue;
-        }
-      `
+      ".c15455a55 {background: red;}.c15455a55:hover {background: blue;}"
     );
   });
 
@@ -87,26 +75,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c6f3da4bd");
+    expect(cn, "to equal snapshot", "c37b75391");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c6f3da4bd {
-          margin-left: 42px;
-        }
-
-        [dir="rtl"] .c6f3da4bd {
-          margin-left: 0;
-          margin-right: 42px;
-        }
-
-        button.c6f3da4bd {
-          border: thin solid orange;
-        }
-      `
+      '.c37b75391 {margin-left: 42px;}[dir="rtl"] .c37b75391 {margin-left: 0;margin-right: 42px;}button.c37b75391 {border: thin solid orange;}'
     );
   });
 
@@ -135,27 +110,13 @@ describe("css", () => {
 
     const cn = classes(foo, bar, baz, "plain-class");
 
-    expect(cn, "to equal snapshot", "plain-class c5b172c95");
+    expect(cn, "to equal snapshot", "plain-class d7b75d0b75");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c5b172c95 {
-          background: red;
-        }
-        .c5b172c95 {
-          background: blue;
-        }
-        .c5b172c95 {
-          background: purple;
-        }
-
-        .c5b172c95:hover {
-          background: pink;
-        }
-      `
+      ".d7b75d0b75 {background: red;} .d7b75d0b75 {background: blue;} .d7b75d0b75 {background: purple;}.d7b75d0b75:hover {background: pink;}"
     );
   });
 
@@ -174,41 +135,24 @@ describe("css", () => {
 
     const cnTrue = classes(foo, true && bar);
 
-    expect(cnTrue, "to equal snapshot", "c47fc33e7");
+    expect(cnTrue, "to equal snapshot", "c5d4c92070");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c47fc33e7 {
-          background: red;
-        }
-        .c47fc33e7 {
-          background: blue;
-        }
-      `
+      ".c5d4c92070 {background: red;} .c5d4c92070 {background: blue;}"
     );
 
     const cnFalse = classes(foo, false && bar);
 
-    expect(cnFalse, "to equal snapshot", "c5c008d7a");
+    expect(cnFalse, "to equal snapshot", "c25682abe");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c47fc33e7 {
-          background: red;
-        }
-        .c47fc33e7 {
-          background: blue;
-        }
-        .c5c008d7a {
-          background: red;
-        }
-      `
+      ".c5d4c92070 {background: red;} .c5d4c92070 {background: blue;} .c25682abe {background: red;}"
     );
 
     expect(classes(foo, true && bar), "to equal", cnTrue);
@@ -217,17 +161,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c47fc33e7 {
-          background: red;
-        }
-        .c47fc33e7 {
-          background: blue;
-        }
-        .c5c008d7a {
-          background: red;
-        }
-      `
+      ".c5d4c92070 {background: red;} .c5d4c92070 {background: blue;} .c25682abe {background: red;}"
     );
   });
 
@@ -240,35 +174,24 @@ describe("css", () => {
 
     const cnBlue = classes(withBackground("blue"));
 
-    expect(cnBlue, "to equal snapshot", "c1d5d5449");
+    expect(cnBlue, "to equal snapshot", "c6cba9811");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c1d5d5449 {
-          background: blue;
-        }
-      `
+      ".c6cba9811 {background: blue;}"
     );
 
     const cnRed = classes(withBackground("red"));
 
-    expect(cnRed, "to equal snapshot", "c5c008d7a");
+    expect(cnRed, "to equal snapshot", "c25682abe");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c1d5d5449 {
-          background: blue;
-        }
-        .c5c008d7a {
-          background: red;
-        }
-      `
+      ".c6cba9811 {background: blue;} .c25682abe {background: red;}"
     );
   });
 
@@ -286,22 +209,57 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c6b91fe5b");
+    expect(cn, "to equal snapshot", "c170ef0df");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      expect.unindent`
-        .c6b91fe5b:before {
-          content: "this is 'some' "content"";
-          background-color: yellow;
-        }
+      '.c170ef0df:before {content: "this is \'some\' "content"";background-color: yellow;}[data-foo="also this"] .c170ef0df {background-color: orange;}'
+    );
+  });
 
-        [data-foo="also this"] .c6b91fe5b {
-          background-color: orange;
-        }
-      `
+  it("doesn't replace & in strings", () => {
+    const foo = css`
+      &:before {
+        content: "this is 'some' & \"content\"";
+        font-family: '"&weird family&"';
+        background-color: yellow;
+      }
+
+      [data-foo="also this & this"] & {
+        background-color: orange;
+      }
+    `;
+
+    const cn = classes(foo);
+
+    expect(cn, "to equal snapshot", "c12f46e4b");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      '.c12f46e4b:before {content: "this is \'some\' & "content"";font-family: \'"&weird family&"\';background-color: yellow;}[data-foo="also this & this"] .c12f46e4b {background-color: orange;}'
+    );
+  });
+
+  it("doesn't replace & in rules", () => {
+    const foo = css`
+      & {
+        background: url(https://www.example.com/image?x=100&y=100);
+      }
+    `;
+
+    const cn = classes(foo);
+
+    expect(cn, "to equal snapshot", "c133f843e");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c133f843e {background: url(https://www.example.com/image?x=100&y=100);}"
     );
   });
 
@@ -312,7 +270,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(foo), "to equal snapshot", "c5c008d7a");
+    expect(classes(foo), "to equal snapshot", "c25682abe");
 
     const bar = css`
       & {
@@ -320,7 +278,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(bar), "to equal snapshot", "c1d5d5449");
+    expect(classes(bar), "to equal snapshot", "c6cba9811");
 
     const baz = css`
       & {
