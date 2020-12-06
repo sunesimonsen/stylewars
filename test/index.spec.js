@@ -110,13 +110,112 @@ describe("css", () => {
 
     const cn = classes(foo, bar, baz, "plain-class");
 
-    expect(cn, "to equal snapshot", "plain-class d7b75d0b75");
+    expect(cn, "to equal snapshot", "plain-class c25682abe c6cba9811 c9b4ffa4");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".d7b75d0b75 {background: red;} .d7b75d0b75 {background: blue;} .d7b75d0b75 {background: purple;}.d7b75d0b75:hover {background: pink;}"
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .c9b4ffa4 {background: purple;}.c9b4ffa4:hover {background: pink;}"
+    );
+  });
+
+  it("reuses classes if they are in the right order in the stylesheet", () => {
+    const foo = css`
+      & {
+        background: red;
+      }
+    `;
+
+    const bar = css`
+      & {
+        background: blue;
+      }
+    `;
+
+    const baz = css`
+      & {
+        background: purple;
+      }
+    `;
+
+    expect(
+      classes(foo, bar, baz),
+      "to equal snapshot",
+      "c25682abe c6cba9811 c5190324d"
+    );
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .c5190324d {background: purple;}"
+    );
+
+    const qux = css`
+      & {
+        background: orange;
+      }
+    `;
+
+    expect(
+      classes(foo, bar, qux),
+      "to equal snapshot",
+      "c25682abe c6cba9811 c7544e85b"
+    );
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .c5190324d {background: purple;} .c7544e85b {background: orange;}"
+    );
+  });
+
+  it("doesn't reuses classes if they are in the wrong order in the stylesheet", () => {
+    const foo = css`
+      & {
+        background: red;
+      }
+    `;
+
+    const bar = css`
+      & {
+        background: blue;
+      }
+    `;
+
+    expect(classes(foo, bar), "to equal snapshot", "c25682abe c6cba9811");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
+    );
+
+    expect(classes(bar, foo), "to equal snapshot", "fdc60801c");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .fdc60801c {background: blue;} .fdc60801c {background: red;}"
+    );
+
+    const qux = css`
+      & {
+        background: orange;
+      }
+    `;
+
+    expect(classes(qux, foo), "to equal snapshot", "c10cd8d0f80");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .fdc60801c {background: blue;} .fdc60801c {background: red;} .c10cd8d0f80 {background: orange;} .c10cd8d0f80 {background: red;}"
     );
   });
 
@@ -135,13 +234,13 @@ describe("css", () => {
 
     const cnTrue = classes(foo, true && bar);
 
-    expect(cnTrue, "to equal snapshot", "c5d4c92070");
+    expect(cnTrue, "to equal snapshot", "c25682abe c6cba9811");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5d4c92070 {background: red;} .c5d4c92070 {background: blue;}"
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
     );
 
     const cnFalse = classes(foo, false && bar);
@@ -152,7 +251,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5d4c92070 {background: red;} .c5d4c92070 {background: blue;} .c25682abe {background: red;}"
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
     );
 
     expect(classes(foo, true && bar), "to equal", cnTrue);
@@ -161,7 +260,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5d4c92070 {background: red;} .c5d4c92070 {background: blue;} .c25682abe {background: red;}"
+      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
     );
   });
 
