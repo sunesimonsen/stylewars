@@ -76,21 +76,23 @@ class CSSTemplate {
   }
 }
 
+const hasDocument = () => typeof document !== "undefined";
+
 const appendCSSToDocument = (template) => {
-  if (typeof document !== "undefined") {
-    const container = document.querySelector("head");
+  if (!hasDocument()) return;
 
-    let hashes = hashesByContainer.get(container);
-    const first = !hashes;
-    if (first) {
-      hashes = new Map();
-      hashesByContainer.set(container, hashes);
-    }
+  const container = document.querySelector("head");
 
-    if (!hashes.has(template.hash)) {
-      insertCss((first ? "" : " ") + template.render());
-      hashes.set(template.hash, counter++);
-    }
+  let hashes = hashesByContainer.get(container);
+  const first = !hashes;
+  if (first) {
+    hashes = new Map();
+    hashesByContainer.set(container, hashes);
+  }
+
+  if (!hashes.has(template.hash)) {
+    insertCss((first ? "" : " ") + template.render());
+    hashes.set(template.hash, counter++);
   }
 };
 
@@ -113,6 +115,8 @@ const getInsertionOrder = (template) => {
 };
 
 const correctlyOrdered = (orders) => {
+  if (!hasDocument()) return false;
+
   let last = orders[0];
   let lastType = typeof last;
 
