@@ -1,3 +1,14 @@
+### v1.3.0 (2020-12-06)
+
+#### Pull requests
+
+- [#5](https://github.com/sunesimonsen/stylewars/pull/5) Inline insert-css and trim it to save bytes ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to main
+
+- [Update bundle badge](https://github.com/sunesimonsen/stylewars/commit/ef67109049a10d86c8a9eab3b3b3d856378eb320) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Always point examples to the newest version in this major](https://github.com/sunesimonsen/stylewars/commit/9f41bcc722cbaa484a7d41c6ed757f52a1d5aece) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.2.0 (2020-12-06)
 
 - [Make the minified bundles smaller](https://github.com/sunesimonsen/stylewars/commit/493b307f8d907818fdca7c60850a62ba7a8c84bc) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
