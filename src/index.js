@@ -1,5 +1,6 @@
 import insertCss from "insert-css";
 
+let counter = 0;
 const hashesByContainer = new Map();
 
 function stringToHash(string) {
@@ -89,13 +90,13 @@ const appendCSSToDocument = (template) => {
     let hashes = hashesByContainer.get(container);
     const first = !hashes;
     if (first) {
-      hashes = new Set();
+      hashes = new Map();
       hashesByContainer.set(container, hashes);
     }
 
     if (!hashes.has(template.hash)) {
       insertCss((first ? "" : " ") + template.render());
-      hashes.add(template.hash);
+      hashes.set(template.hash, counter++);
     }
   }
 };
@@ -111,6 +112,30 @@ export const css = (strings, ...values) => {
   return new CSSTemplate(template.replace(/\s*\n+\s*/g, ""));
 };
 
+const getInsertionOrder = (template) => {
+  const container = document.querySelector("head");
+  const hashes = hashesByContainer.get(container);
+
+  return hashes && hashes.get(template.hash);
+};
+
+const correctlyOrdered = (orders) => {
+  let last = orders[0];
+  let lastType = typeof last;
+
+  for (let i = 1; i < orders.length; i++) {
+    const n = orders[i];
+    const nType = typeof n;
+
+    if (lastType !== "number" && nType === "number") return false;
+    if (n < last) return false;
+
+    last = n;
+    lastType = nType;
+  }
+  return true;
+};
+
 export const classes = (...args) => {
   const values = Array.from(args).filter(Boolean);
 
@@ -118,12 +143,24 @@ export const classes = (...args) => {
 
   const templates = values.filter((v) => v instanceof CSSTemplate);
 
-  if (templates.length > 0) {
+  const insertionOrders = templates.map(getInsertionOrder);
+
+  if (correctlyOrdered(insertionOrders)) {
+    templates.forEach((template, i) => {
+      if (typeof insertionOrders[i] !== "number") {
+        appendCSSToDocument(template);
+      }
+
+      classNames.push(template.hashString);
+    });
+  } else {
     const template = templates.reduce((combined, template) =>
       combined.combine(template)
     );
 
-    appendCSSToDocument(template);
+    if (typeof getInsertionOrder(template) !== "number") {
+      appendCSSToDocument(template);
+    }
 
     classNames.push(template.hashString);
   }
