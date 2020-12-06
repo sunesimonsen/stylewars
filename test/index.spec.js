@@ -24,13 +24,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c25682abe");
+    expect(cn, "to equal snapshot", "c5908582");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;}"
+      ".c5908582 {background: red;}"
     );
   });
 
@@ -47,13 +47,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c15455a55");
+    expect(cn, "to equal snapshot", "c76beb9ab");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c15455a55 {background: red;}.c15455a55:hover {background: blue;}"
+      ".c76beb9ab {background: red;}.c76beb9ab:hover {background: blue;}"
     );
   });
 
@@ -75,13 +75,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c37b75391");
+    expect(cn, "to equal snapshot", "c66589bb1");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      '.c37b75391 {margin-left: 42px;}[dir="rtl"] .c37b75391 {margin-left: 0;margin-right: 42px;}button.c37b75391 {border: thin solid orange;}'
+      '.c66589bb1 {margin-left: 42px;}[dir="rtl"] .c66589bb1 {margin-left: 0;margin-right: 42px;}button.c66589bb1 {border: thin solid orange;}'
     );
   });
 
@@ -110,13 +110,13 @@ describe("css", () => {
 
     const cn = classes(foo, bar, baz, "plain-class");
 
-    expect(cn, "to equal snapshot", "plain-class c25682abe c6cba9811 c9b4ffa4");
+    expect(cn, "to equal snapshot", "plain-class c5908582 c5bb262d1 c2a4d609c");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .c9b4ffa4 {background: purple;}.c9b4ffa4:hover {background: pink;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .c2a4d609c {background: purple;}.c2a4d609c:hover {background: pink;}"
     );
   });
 
@@ -142,14 +142,14 @@ describe("css", () => {
     expect(
       classes(foo, bar, baz),
       "to equal snapshot",
-      "c25682abe c6cba9811 c5190324d"
+      "c5908582 c5bb262d1 c72eebb73"
     );
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .c5190324d {background: purple;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .c72eebb73 {background: purple;}"
     );
 
     const qux = css`
@@ -161,14 +161,14 @@ describe("css", () => {
     expect(
       classes(foo, bar, qux),
       "to equal snapshot",
-      "c25682abe c6cba9811 c7544e85b"
+      "c5908582 c5bb262d1 c70314c25"
     );
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .c5190324d {background: purple;} .c7544e85b {background: orange;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .c72eebb73 {background: purple;} .c70314c25 {background: orange;}"
     );
   });
 
@@ -185,22 +185,22 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(foo, bar), "to equal snapshot", "c25682abe c6cba9811");
+    expect(classes(foo, bar), "to equal snapshot", "c5908582 c5bb262d1");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
     );
 
-    expect(classes(bar, foo), "to equal snapshot", "fdc60801c");
+    expect(classes(bar, foo), "to equal snapshot", "d465928a0");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .fdc60801c {background: blue;} .fdc60801c {background: red;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .d465928a0 {background: blue;} .d465928a0 {background: red;}"
     );
 
     const qux = css`
@@ -209,13 +209,13 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(qux, foo), "to equal snapshot", "c10cd8d0f80");
+    expect(classes(qux, foo), "to equal snapshot", "c103cb0e1c4");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;} .fdc60801c {background: blue;} .fdc60801c {background: red;} .c10cd8d0f80 {background: orange;} .c10cd8d0f80 {background: red;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .d465928a0 {background: blue;} .d465928a0 {background: red;} .c103cb0e1c4 {background: orange;} .c103cb0e1c4 {background: red;}"
     );
   });
 
@@ -234,24 +234,24 @@ describe("css", () => {
 
     const cnTrue = classes(foo, true && bar);
 
-    expect(cnTrue, "to equal snapshot", "c25682abe c6cba9811");
+    expect(cnTrue, "to equal snapshot", "c5908582 c5bb262d1");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
     );
 
     const cnFalse = classes(foo, false && bar);
 
-    expect(cnFalse, "to equal snapshot", "c25682abe");
+    expect(cnFalse, "to equal snapshot", "c5908582");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
     );
 
     expect(classes(foo, true && bar), "to equal", cnTrue);
@@ -260,7 +260,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c25682abe {background: red;} .c6cba9811 {background: blue;}"
+      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
     );
   });
 
@@ -273,24 +273,24 @@ describe("css", () => {
 
     const cnBlue = classes(withBackground("blue"));
 
-    expect(cnBlue, "to equal snapshot", "c6cba9811");
+    expect(cnBlue, "to equal snapshot", "c5bb262d1");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c6cba9811 {background: blue;}"
+      ".c5bb262d1 {background: blue;}"
     );
 
     const cnRed = classes(withBackground("red"));
 
-    expect(cnRed, "to equal snapshot", "c25682abe");
+    expect(cnRed, "to equal snapshot", "c5908582");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c6cba9811 {background: blue;} .c25682abe {background: red;}"
+      ".c5bb262d1 {background: blue;} .c5908582 {background: red;}"
     );
   });
 
@@ -308,13 +308,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c170ef0df");
+    expect(cn, "to equal snapshot", "c6bc3aec1");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      '.c170ef0df:before {content: "this is \'some\' "content"";background-color: yellow;}[data-foo="also this"] .c170ef0df {background-color: orange;}'
+      '.c6bc3aec1:before {content: "this is \'some\' "content"";background-color: yellow;}[data-foo="also this"] .c6bc3aec1 {background-color: orange;}'
     );
   });
 
@@ -333,13 +333,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c12f46e4b");
+    expect(cn, "to equal snapshot", "c7e34b1b5");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      '.c12f46e4b:before {content: "this is \'some\' & "content"";font-family: \'"&weird family&"\';background-color: yellow;}[data-foo="also this & this"] .c12f46e4b {background-color: orange;}'
+      '.c7e34b1b5:before {content: "this is \'some\' & "content"";font-family: \'"&weird family&"\';background-color: yellow;}[data-foo="also this & this"] .c7e34b1b5 {background-color: orange;}'
     );
   });
 
@@ -352,13 +352,13 @@ describe("css", () => {
 
     const cn = classes(foo);
 
-    expect(cn, "to equal snapshot", "c133f843e");
+    expect(cn, "to equal snapshot", "c6047b53e");
 
     expect(
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c133f843e {background: url(https://www.example.com/image?x=100&y=100);}"
+      ".c6047b53e {background: url(https://www.example.com/image?x=100&y=100);}"
     );
   });
 
@@ -369,7 +369,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(foo), "to equal snapshot", "c25682abe");
+    expect(classes(foo), "to equal snapshot", "c5908582");
 
     const bar = css`
       & {
@@ -377,7 +377,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(bar), "to equal snapshot", "c6cba9811");
+    expect(classes(bar), "to equal snapshot", "c5bb262d1");
 
     const baz = css`
       & {

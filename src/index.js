@@ -6,10 +6,9 @@ const hashesByContainer = new Map();
 function stringToHash(string) {
   var hash = 0;
 
-  if (string.length === 0) return hash;
-
-  for (let i = 0; i < string.length; i++) {
-    const char = string.charCodeAt(i);
+  let i = string.length;
+  while (i) {
+    const char = string.charCodeAt(--i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
@@ -72,9 +71,7 @@ class CSSTemplate {
 
   combine(template) {
     const content = this.content + " " + template.content;
-    let hash = 17;
-    hash = hash * 37 + this.hash;
-    hash = hash * 37 + template.hash;
+    const hash = (629 + this.hash) * 37 + template.hash;
     return new CSSTemplate(content, hash);
   }
 
