@@ -74,10 +74,6 @@ class CSSTemplate {
     const hash = (629 + this.hash) * 37 + template.hash;
     return new CSSTemplate(content, hash);
   }
-
-  toString() {
-    return this.hash;
-  }
 }
 
 const appendCSSToDocument = (template) => {
