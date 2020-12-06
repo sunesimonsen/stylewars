@@ -1,3 +1,18 @@
+### v1.1.0 (2020-12-06)
+
+#### Pull requests
+
+- [#4](https://github.com/sunesimonsen/stylewars/pull/4) Reused styles that is in the correct order ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to main
+
+- [Added an animation example](https://github.com/sunesimonsen/stylewars/commit/c15b04ebf3fb01eec6c7f218aeb6144094872199) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Added a fork button to the examples](https://github.com/sunesimonsen/stylewars/commit/84da8f5f990579d4f9ee98a1b72ca47492c129c2) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update examples to version 1.0.0](https://github.com/sunesimonsen/stylewars/commit/1d52028bc2503dbe822d4ba16ed6322fae8cd06d) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Added missing heading to the examples](https://github.com/sunesimonsen/stylewars/commit/3ce006961a035a105045b33a7471a36d51d5a700) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Trying to force the badges to the latest version](https://github.com/sunesimonsen/stylewars/commit/65e9b6b42174ec695c2d4a3c1df7f14585511718) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [+1 more](https://github.com/sunesimonsen/stylewars/compare/v1.0.0...v1.1.0)
+
 ### v1.0.0 (2020-12-06)
 
 - [#3](https://github.com/sunesimonsen/stylewars/pull/3) Examples using JSFiddle ([Sune Simonsen](mailto:sune@we-knowhow.dk))
