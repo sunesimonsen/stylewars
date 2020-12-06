@@ -24,12 +24,12 @@ const pairs = {
 
 class CSSTemplate {
   constructor(content, hash = stringToHash(content)) {
-    this.content = content;
-    this.hash = hash;
+    this._content = content;
+    this._hash = hash;
     this._rendered = null;
 
-    const hashString = Math.abs(this.hash).toString(16);
-    this.hashString = hashString.match(/^[0-9]/)
+    const hashString = Math.abs(this._hash).toString(16);
+    this._hashString = hashString.match(/^[0-9]/)
       ? `c${hashString}`
       : hashString;
   }
@@ -41,7 +41,7 @@ class CSSTemplate {
 
     let result = "";
     let close = null;
-    const tokens = this.content.split(/([:;{}&]|\\?["']|\\)/g).filter(Boolean);
+    const tokens = this._content.split(/([:;{}&]|\\?["']|\\)/g).filter(Boolean);
 
     for (let i = 0; i < tokens.length; i++) {
       const token = tokens[i];
@@ -59,7 +59,7 @@ class CSSTemplate {
       if (close) {
         result += token;
       } else if (token === "&") {
-        result += `.${this.hashString}`;
+        result += `.${this._hashString}`;
       } else {
         result += token;
       }
@@ -70,18 +70,19 @@ class CSSTemplate {
   }
 
   combine(template) {
-    const content = this.content + " " + template.content;
-    const hash = (629 + this.hash) * 37 + template.hash;
+    const content = this._content + " " + template._content;
+    const hash = (629 + this._hash) * 37 + template._hash;
     return new CSSTemplate(content, hash);
   }
 }
 
 const hasDocument = () => typeof document !== "undefined";
+const getContainer = () => document.querySelector("head");
 
 const appendCSSToDocument = (template) => {
   if (!hasDocument()) return;
 
-  const container = document.querySelector("head");
+  const container = getContainer();
 
   let hashes = hashesByContainer.get(container);
   const first = !hashes;
@@ -90,9 +91,9 @@ const appendCSSToDocument = (template) => {
     hashesByContainer.set(container, hashes);
   }
 
-  if (!hashes.has(template.hash)) {
+  if (!hashes.has(template._hash)) {
     insertCss((first ? "" : " ") + template.render());
-    hashes.set(template.hash, counter++);
+    hashes.set(template._hash, counter++);
   }
 };
 
@@ -108,10 +109,10 @@ export const css = (strings, ...values) => {
 };
 
 const getInsertionOrder = (template) => {
-  const container = document.querySelector("head");
+  const container = getContainer();
   const hashes = hashesByContainer.get(container);
 
-  return hashes && hashes.get(template.hash);
+  return hashes && hashes.get(template._hash);
 };
 
 const correctlyOrdered = (orders) => {
@@ -148,7 +149,7 @@ export const classes = (...args) => {
         appendCSSToDocument(template);
       }
 
-      classNames.push(template.hashString);
+      classNames.push(template._hashString);
     });
   } else {
     const template = templates.reduce((combined, template) =>
@@ -159,7 +160,7 @@ export const classes = (...args) => {
       appendCSSToDocument(template);
     }
 
-    classNames.push(template.hashString);
+    classNames.push(template._hashString);
   }
 
   return classNames.join(" ");

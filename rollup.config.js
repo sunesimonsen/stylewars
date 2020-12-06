@@ -3,6 +3,17 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 
 const plugins = [commonjs(), nodeResolve()];
+const minifyPlugins = [
+  terser({
+    compress: true,
+    mangle: {
+      reserved: [],
+      properties: {
+        regex: /^_/,
+      },
+    },
+  }),
+];
 
 export default [
   {
@@ -27,7 +38,7 @@ export default [
       file: "dist/bundle.cjs.min.js",
       format: "cjs",
     },
-    plugins: plugins.concat(terser()),
+    plugins: plugins.concat(minifyPlugins),
   },
   {
     input: "src/index.js",
@@ -35,6 +46,6 @@ export default [
       file: "dist/bundle.esm.min.js",
       format: "esm",
     },
-    plugins: plugins.concat(terser()),
+    plugins: plugins.concat(minifyPlugins),
   },
 ];
