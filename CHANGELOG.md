@@ -1,3 +1,11 @@
+### v1.2.0 (2020-12-06)
+
+- [Make the minified bundles smaller](https://github.com/sunesimonsen/stylewars/commit/493b307f8d907818fdca7c60850a62ba7a8c84bc) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Check is there is a document defined](https://github.com/sunesimonsen/stylewars/commit/7a4bcc503e8db6fef77b2723c74bad1469b99263) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Remove unnecessary toString](https://github.com/sunesimonsen/stylewars/commit/42b30b85a5f46026a9903601341aef970ff4a06e) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Shave a few bytes of the hash code](https://github.com/sunesimonsen/stylewars/commit/1676b13c1c87ec3cc4f0c17a059a1dffd328ffa4) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update documentation to the newest version](https://github.com/sunesimonsen/stylewars/commit/8755cfecd153fe7fe568d2611689d67cfd874ebf) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.1.0 (2020-12-06)
 
 #### Pull requests
