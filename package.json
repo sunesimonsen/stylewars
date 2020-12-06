@@ -55,9 +55,6 @@
     "unexpected-dom": "^5.0.0",
     "unexpected-snapshot": "^1.1.0"
   },
-  "dependencies": {
-    "insert-css": "^2.0.0"
-  },
   "publishConfig": {
     "access": "public"
   },
