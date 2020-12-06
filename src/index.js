@@ -1,4 +1,5 @@
-import insertCss from "insert-css";
+import insertCss from "./insertCSS.js";
+import getContainer from "./getContainer.js";
 
 let counter = 0;
 const hashesByContainer = new Map();
@@ -77,7 +78,6 @@ class CSSTemplate {
 }
 
 const hasDocument = () => typeof document !== "undefined";
-const getContainer = () => document.querySelector("head");
 
 const appendCSSToDocument = (template) => {
   if (!hasDocument()) return;
