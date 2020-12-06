@@ -13,6 +13,8 @@ Just define your CSS rules and apply them.
 - Framework agnostic
 - Unique class names
 
+[Live examples](https://stylewars.surge.sh/)
+
 [![Style Wars (1983)](https://i.ytimg.com/vi/f9KxbaSU-Eo/hqdefault.jpg)](https://www.youtube.com/embed/f9KxbaSU-Eo)
 
 ## Installation
@@ -22,6 +24,8 @@ npm install stylewars
 ```
 
 ## Usage
+
+[See the live examples](https://stylewars.surge.sh/)
 
 This example shows usage together with React, but the library can be used
 together with any framework.
@@ -112,6 +116,47 @@ const MaybeColoredButton = ({ color, children, ...other }) => (
   >
     {children}
   </button>
+);
+```
+
+### Theming
+
+You just use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
+
+```js
+const themedButtonStyles = css`
+  & {
+    background: var(--accent-color, #587894);
+    color: var(--text-color, white);
+  }
+
+  &:hover {
+    background: var(--accent-highlight-color, #89a2b9);
+  }
+`;
+
+const ThemedButton = ({ color, children, ...other }) => (
+  <button {...other} class={classes(buttonStyles, themedButtonStyles)}>
+    {children}
+  </button>
+);
+```
+
+Now you can apply a theme to the DOM sub-tree the following way:
+
+```js
+const yellowTheme = css`
+  & {
+    --text-color: black;
+    --accent-color: #fed6a8;
+    --accent-highlight-color: #ffb057;
+  }
+`;
+
+const Example = () => (
+  <section className={classes(yellowTheme)}>
+    <ThemedButton>I'm themed</ThemedButton>
+  </section>
 );
 ```
 
