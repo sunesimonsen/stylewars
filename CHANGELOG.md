@@ -1,3 +1,7 @@
+### v1.0.0 (2020-12-06)
+
+- [#3](https://github.com/sunesimonsen/stylewars/pull/3) Examples using JSFiddle ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v0.3.0 (2020-12-05)
 
 - [#2](https://github.com/sunesimonsen/stylewars/pull/2) Provide minified builds ([Sune Simonsen](mailto:sune@we-knowhow.dk))
