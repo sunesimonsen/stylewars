@@ -1,3 +1,22 @@
+### v1.6.1 (2020-12-07)
+
+#### Pull requests
+
+- [#10](https://github.com/sunesimonsen/stylewars/pull/10) Bump eslint-config-prettier from 6.15.0 to 7.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#11](https://github.com/sunesimonsen/stylewars/pull/11) Bump eslint-plugin-standard from 4.1.0 to 5.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#12](https://github.com/sunesimonsen/stylewars/pull/12) Bump eslint from 7.14.0 to 7.15.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#9](https://github.com/sunesimonsen/stylewars/pull/9) Bump eslint-config-standard from 14.1.1 to 16.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#13](https://github.com/sunesimonsen/stylewars/pull/13) Bump rollup from 2.34.1 to 2.34.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to main
+
+- [Fix module entry](https://github.com/sunesimonsen/stylewars/commit/121e769cfbc72155b0c13965976a9c04003e5de7) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Create dependabot.yml](https://github.com/sunesimonsen/stylewars/commit/8eda8325c9902a09f166dc77293a5b586696f88d) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update examples](https://github.com/sunesimonsen/stylewars/commit/5df261df4f5c031aea53461e235954dc546bc490) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Update readme with multi version support](https://github.com/sunesimonsen/stylewars/commit/87c99755e92c4a7589b7e2ca2423c94e363b59af) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Add multi version example](https://github.com/sunesimonsen/stylewars/commit/d48ea22900b10575f25e3bc04d5b6df9855eece9) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [+1 more](https://github.com/sunesimonsen/stylewars/compare/v1.6.0...v1.6.1)
+
 ### v1.6.0 (2020-12-07)
 
 #### Pull requests
