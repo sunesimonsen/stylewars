@@ -2,6 +2,7 @@ import insertCss from "./insertCSS.js";
 import getContainer from "./getContainer.js";
 
 let counter = 1;
+const hashes = new Map();
 const hashesByContainer = new Map();
 
 function stringToHash(string) {
@@ -28,6 +29,14 @@ class CSSTemplate {
     this._content = content;
     this._hash = hash;
     this._rendered = null;
+
+    while (hashes.has(this._hash) && hashes.get(this._hash) !== content) {
+      this._hash++;
+    }
+
+    if (!hashes.has(this._hash)) {
+      hashes.set(this._hash, content);
+    }
 
     const hashString = Math.abs(this._hash).toString(16);
     this._hashString = hashString.match(/^[0-9]/)
