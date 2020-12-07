@@ -1,3 +1,13 @@
+### v1.4.0 (2020-12-07)
+
+#### Pull requests
+
+- [#6](https://github.com/sunesimonsen/stylewars/pull/6) Take care of hash collision ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to main
+
+- [Update badge](https://github.com/sunesimonsen/stylewars/commit/31279da7c1a74348b87a3fbe5b95b9e89669ff30) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.3.0 (2020-12-06)
 
 #### Pull requests
