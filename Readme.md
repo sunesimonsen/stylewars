@@ -20,8 +20,28 @@ Just define your CSS rules and apply them.
 
 ## Installation
 
+### NPM
+
 ```sh
 npm install stylewars
+```
+
+### unpkg.com
+
+```js
+import {
+  css,
+  classes,
+} from "https://unpkg.com/stylewars@1.6.0/dist/bundle.esm.js";
+```
+
+or
+
+```js
+import {
+  css,
+  classes,
+} from "https://unpkg.com/stylewars@1.6.0/dist/bundle.esm.min.js";
 ```
 
 ## Usage
