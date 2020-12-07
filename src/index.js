@@ -1,7 +1,7 @@
 import insertCss from "./insertCSS.js";
 import getContainer from "./getContainer.js";
 
-let counter = 0;
+let counter = 1;
 const hashesByContainer = new Map();
 
 function stringToHash(string) {
@@ -119,17 +119,14 @@ const correctlyOrdered = (orders) => {
   if (!hasDocument()) return false;
 
   let last = orders[0];
-  let lastType = typeof last;
 
   for (let i = 1; i < orders.length; i++) {
     const n = orders[i];
-    const nType = typeof n;
 
-    if (lastType !== "number" && nType === "number") return false;
+    if (!last && n) return false;
     if (n < last) return false;
 
     last = n;
-    lastType = nType;
   }
   return true;
 };
@@ -145,7 +142,7 @@ export const classes = (...args) => {
 
   if (correctlyOrdered(insertionOrders)) {
     templates.forEach((template, i) => {
-      if (typeof insertionOrders[i] !== "number") {
+      if (!insertionOrders[i]) {
         appendCSSToDocument(template);
       }
 
@@ -156,7 +153,7 @@ export const classes = (...args) => {
       combined.combine(template)
     );
 
-    if (typeof getInsertionOrder(template) !== "number") {
+    if (!getInsertionOrder(template)) {
       appendCSSToDocument(template);
     }
 
