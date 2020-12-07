@@ -3,7 +3,7 @@
   "version": "1.6.0",
   "description": "A tiny CSS in JS library that requires no tooling",
   "main": "dist/bundle.cjs.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/bundle.esm.js",
   "scripts": {
     "test": "mocha",
     "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
