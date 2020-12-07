@@ -1,3 +1,13 @@
+### v1.5.0 (2020-12-07)
+
+#### Pull requests
+
+- [#7](https://github.com/sunesimonsen/stylewars/pull/7) Allow multiple versions of stylewars in the same document ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to main
+
+- [Update size badge](https://github.com/sunesimonsen/stylewars/commit/1d35ce8ec0038e2398b4f9ed5a071016dab3a565) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.4.0 (2020-12-07)
 
 #### Pull requests
