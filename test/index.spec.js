@@ -34,6 +34,32 @@ describe("css", () => {
     );
   });
 
+  it("appends the styles to the stylesheat when calling toString", () => {
+    const foo = css`
+      & {
+        background: red;
+      }
+    `;
+
+    expect(foo.toString(), "to equal snapshot", "c5908582");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c5908582 {background: red;}"
+    );
+
+    expect(foo.toString(), "to equal snapshot", "c5908582");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c5908582 {background: red;}"
+    );
+  });
+
   it("supports :hover", () => {
     const foo = css`
       & {

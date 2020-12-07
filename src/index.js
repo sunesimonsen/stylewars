@@ -85,6 +85,10 @@ class CSSTemplate {
     const hash = (629 + this._hash) * 37 + template._hash;
     return new CSSTemplate(content, hash);
   }
+
+  toString() {
+    return classes(this);
+  }
 }
 
 const hasDocument = () => typeof document !== "undefined";
