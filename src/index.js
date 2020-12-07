@@ -1,9 +1,5 @@
 import insertCss from "./insertCSS.js";
-import getContainer from "./getContainer.js";
-
-let counter = 1;
-const hashes = new Map();
-const hashesByContainer = new Map();
+import getStyleElement from "./getStyleElement.js";
 
 function stringToHash(string) {
   var hash = 0;
@@ -18,6 +14,9 @@ function stringToHash(string) {
   return hash;
 }
 
+const getHashes = () => getStyleElement().hashes;
+const getPositions = () => getStyleElement().positions;
+
 const pairs = {
   '"': '"',
   "'": "'",
@@ -29,6 +28,8 @@ class CSSTemplate {
     this._content = content;
     this._hash = hash;
     this._rendered = null;
+
+    const hashes = getHashes();
 
     while (hashes.has(this._hash) && hashes.get(this._hash) !== content) {
       this._hash++;
@@ -91,18 +92,11 @@ const hasDocument = () => typeof document !== "undefined";
 const appendCSSToDocument = (template) => {
   if (!hasDocument()) return;
 
-  const container = getContainer();
+  const positions = getPositions();
 
-  let hashes = hashesByContainer.get(container);
-  const first = !hashes;
-  if (first) {
-    hashes = new Map();
-    hashesByContainer.set(container, hashes);
-  }
-
-  if (!hashes.has(template._hash)) {
-    insertCss((first ? "" : " ") + template.render());
-    hashes.set(template._hash, counter++);
+  if (!positions.has(template._hash)) {
+    insertCss(template.render());
+    positions.set(template._hash, getStyleElement().counter++);
   }
 };
 
@@ -117,20 +111,19 @@ export const css = (strings, ...values) => {
   return new CSSTemplate(template.replace(/\s*\n+\s*/g, ""));
 };
 
-const getInsertionOrder = (template) => {
-  const container = getContainer();
-  const hashes = hashesByContainer.get(container);
+const getPosition = (template) => {
+  const positions = getPositions();
 
-  return hashes && hashes.get(template._hash);
+  return positions.get(template._hash);
 };
 
-const correctlyOrdered = (orders) => {
+const correctlyOrdered = (positions) => {
   if (!hasDocument()) return false;
 
-  let last = orders[0];
+  let last = positions[0];
 
-  for (let i = 1; i < orders.length; i++) {
-    const n = orders[i];
+  for (let i = 1; i < positions.length; i++) {
+    const n = positions[i];
 
     if (!last && n) return false;
     if (n < last) return false;
@@ -147,11 +140,11 @@ export const classes = (...args) => {
 
   const templates = values.filter((v) => v instanceof CSSTemplate);
 
-  const insertionOrders = templates.map(getInsertionOrder);
+  const positions = templates.map(getPosition);
 
-  if (correctlyOrdered(insertionOrders)) {
+  if (correctlyOrdered(positions)) {
     templates.forEach((template, i) => {
-      if (!insertionOrders[i]) {
+      if (!positions[i]) {
         appendCSSToDocument(template);
       }
 
@@ -162,7 +155,7 @@ export const classes = (...args) => {
       combined.combine(template)
     );
 
-    if (!getInsertionOrder(template)) {
+    if (!getPosition(template)) {
       appendCSSToDocument(template);
     }
 
