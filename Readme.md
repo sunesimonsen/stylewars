@@ -50,7 +50,7 @@ const buttonStyles = css`
 `;
 
 const BoringButton = ({ children, ...other }) => (
-  <button {...other} className={classes(buttonStyles)}>
+  <button {...other} className={buttonStyles}>
     {children}
   </button>
 );
@@ -155,7 +155,7 @@ const yellowTheme = css`
 `;
 
 const Example = () => (
-  <section className={classes(yellowTheme)}>
+  <section className={yellowTheme}>
     <ThemedButton>I'm themed</ThemedButton>
   </section>
 );
