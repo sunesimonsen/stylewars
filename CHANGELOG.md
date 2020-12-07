@@ -1,3 +1,13 @@
+### v1.6.0 (2020-12-07)
+
+#### Pull requests
+
+- [#8](https://github.com/sunesimonsen/stylewars/pull/8) Support using CSS directly by overriding toString ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
+#### Commits to main
+
+- [Update size badge](https://github.com/sunesimonsen/stylewars/commit/547464d16d3637ff9ede29b0ad2b068ce1cd8778) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.5.0 (2020-12-07)
 
 #### Pull requests
