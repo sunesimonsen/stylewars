@@ -116,7 +116,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .c2a4d609c {background: purple;}.c2a4d609c:hover {background: pink;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c2a4d609c {background: purple;}.c2a4d609c:hover {background: pink;}"
     );
   });
 
@@ -149,7 +149,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .c72eebb73 {background: purple;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}"
     );
 
     const qux = css`
@@ -168,7 +168,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .c72eebb73 {background: purple;} .c70314c25 {background: orange;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}.c70314c25 {background: orange;}"
     );
   });
 
@@ -191,7 +191,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
 
     expect(classes(bar, foo), "to equal snapshot", "d465928a0");
@@ -200,7 +200,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .d465928a0 {background: blue;} .d465928a0 {background: red;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.d465928a0 {background: blue;} .d465928a0 {background: red;}"
     );
 
     const qux = css`
@@ -215,7 +215,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;} .d465928a0 {background: blue;} .d465928a0 {background: red;} .c103cb0e1c4 {background: orange;} .c103cb0e1c4 {background: red;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.d465928a0 {background: blue;} .d465928a0 {background: red;}.c103cb0e1c4 {background: orange;} .c103cb0e1c4 {background: red;}"
     );
   });
 
@@ -240,7 +240,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
 
     const cnFalse = classes(foo, false && bar);
@@ -251,7 +251,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
 
     expect(classes(foo, true && bar), "to equal", cnTrue);
@@ -260,7 +260,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5908582 {background: red;} .c5bb262d1 {background: blue;}"
+      ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
   });
 
@@ -290,7 +290,7 @@ describe("css", () => {
       document,
       "to have CSS satisfying",
       "to equal snapshot",
-      ".c5bb262d1 {background: blue;} .c5908582 {background: red;}"
+      ".c5bb262d1 {background: blue;}.c5908582 {background: red;}"
     );
   });
 
