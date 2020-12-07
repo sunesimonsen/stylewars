@@ -12,6 +12,7 @@ Just define your CSS rules and apply them.
 - Gives you all of the power of CSS
 - Framework agnostic
 - Unique class names
+- Allows multiple versions in the page
 
 [Live examples](https://stylewars.surge.sh/)
 
