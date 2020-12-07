@@ -39,7 +39,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^5.0.0",
     "esm": "^3.2.25",
     "jsdom": "^16.4.0",
     "magicpen-prism": "^4.1.1",
