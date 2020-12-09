@@ -115,7 +115,7 @@ variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
 If you need to apply a global class, it can be done this way:
 
 ```js
-const GloballyStyldedButton = ({ color, children, ...other }) => (
+const GloballyStyledButton = ({ color, children, ...other }) => (
   <button
     {...other}
     className={classes("global-class", coloredBackground(color))}
