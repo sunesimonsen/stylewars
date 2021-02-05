@@ -1,3 +1,22 @@
+### v1.7.0 (2021-02-05)
+
+#### Pull requests
+
+- [#21](https://github.com/sunesimonsen/stylewars/pull/21) Bump eslint-plugin-react from 7.21.5 to 7.22.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#22](https://github.com/sunesimonsen/stylewars/pull/22) Bump eslint from 7.16.0 to 7.17.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#17](https://github.com/sunesimonsen/stylewars/pull/17) Bump rollup from 2.34.2 to 2.35.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#18](https://github.com/sunesimonsen/stylewars/pull/18) Bump @rollup\/plugin-node-resolve from 11.0.0 to 11.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#19](https://github.com/sunesimonsen/stylewars/pull/19) Bump eslint-config-prettier from 7.0.0 to 7.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#20](https://github.com/sunesimonsen/stylewars/pull/20) Bump eslint from 7.15.0 to 7.16.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#15](https://github.com/sunesimonsen/stylewars/pull/15) Bump unexpected-snapshot from 1.1.0 to 1.1.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#14](https://github.com/sunesimonsen/stylewars/pull/14) Typo in readme ([Renan LE CARO](mailto:renan.lecaro@gmail.com))
+
+#### Commits to main
+
+- [Trim the size of the bundle](https://github.com/sunesimonsen/stylewars/commit/9c951ce08fc81e3757dde04aa6642af6a6108fc8) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Clean eslint](https://github.com/sunesimonsen/stylewars/commit/db5d842ac2cb03327cbe0318c0521b67ba1e568b) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Added unpkg information to the readme](https://github.com/sunesimonsen/stylewars/commit/b719c74323b3850d23ed14b281e5fc2a3bf0ded4) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.6.1 (2020-12-07)
 
 #### Pull requests
