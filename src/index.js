@@ -1,5 +1,41 @@
-import insertCss from "./insertCSS.js";
-import getStyleElement from "./getStyleElement.js";
+const id = "stylewars";
+
+const getDocument = () => typeof document !== "undefined" && document;
+
+const getStyleElement = () => {
+  let styleElement = getDocument().getElementById(id);
+
+  if (styleElement) return styleElement;
+
+  styleElement = getDocument().createElement("style");
+  styleElement.setAttribute("type", "text/css");
+  styleElement.setAttribute("id", id);
+  styleElement._hashes = new Map();
+  styleElement._positions = new Map();
+  styleElement._counter = 1;
+  getDocument().head.appendChild(styleElement);
+
+  return styleElement;
+};
+
+// Inspired by https://github.com/substack/insert-css
+const insertCss = (css) => {
+  const styleElement = getStyleElement();
+
+  // strip potential UTF-8 BOM if css was read from a file
+  if (css.charCodeAt(0) === 0xfeff) {
+    css = css.substr(1, css.length);
+  }
+
+  // actually add the stylesheet
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText += css;
+  } else {
+    styleElement.textContent += css;
+  }
+
+  return styleElement;
+};
 
 function stringToHash(string) {
   var hash = 0;
@@ -14,8 +50,8 @@ function stringToHash(string) {
   return hash;
 }
 
-const getHashes = () => getStyleElement().hashes;
-const getPositions = () => getStyleElement().positions;
+const getHashes = () => getStyleElement()._hashes;
+const getPositions = () => getStyleElement()._positions;
 
 const pairs = {
   '"': '"',
@@ -45,7 +81,7 @@ class CSSTemplate {
       : hashString;
   }
 
-  render() {
+  _render() {
     if (typeof this._rendered === "string") {
       return this._rendered;
     }
@@ -80,7 +116,7 @@ class CSSTemplate {
     return this._rendered;
   }
 
-  combine(template) {
+  _combine(template) {
     const content = this._content + " " + template._content;
     const hash = (629 + this._hash) * 37 + template._hash;
     return new CSSTemplate(content, hash);
@@ -91,16 +127,14 @@ class CSSTemplate {
   }
 }
 
-const hasDocument = () => typeof document !== "undefined";
-
 const appendCSSToDocument = (template) => {
-  if (!hasDocument()) return;
+  if (!getDocument()) return;
 
   const positions = getPositions();
 
   if (!positions.has(template._hash)) {
-    insertCss(template.render());
-    positions.set(template._hash, getStyleElement().counter++);
+    insertCss(template._render());
+    positions.set(template._hash, getStyleElement()._counter++);
   }
 };
 
@@ -122,7 +156,7 @@ const getPosition = (template) => {
 };
 
 const correctlyOrdered = (positions) => {
-  if (!hasDocument()) return false;
+  if (!getDocument()) return false;
 
   let last = positions[0];
 
@@ -156,7 +190,7 @@ export const classes = (...args) => {
     });
   } else {
     const template = templates.reduce((combined, template) =>
-      combined.combine(template)
+      combined._combine(template)
     );
 
     if (!getPosition(template)) {
