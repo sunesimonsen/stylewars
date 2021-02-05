@@ -16,7 +16,7 @@ Just define your CSS rules and apply them.
 
 [Live examples](https://stylewars.surge.sh/)
 
-[![Style Wars (1983)](https://i.ytimg.com/vi/f9KxbaSU-Eo/hqdefault.jpg)](https://www.youtube.com/embed/f9KxbaSU-Eo)
+![Style Wars (1983)](./stylewars.jpg)
 
 ## Installation
 
