@@ -1,3 +1,7 @@
+### v1.7.1 (2021-02-05)
+
+- [Fixing missing video in the readme](https://github.com/sunesimonsen/stylewars/commit/1b47f743e715e4f08112213498a1e553e7dff007) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.7.0 (2021-02-05)
 
 #### Pull requests
