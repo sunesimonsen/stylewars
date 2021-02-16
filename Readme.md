@@ -1,7 +1,7 @@
 # Stylewars
 
 [![Checks](https://github.com/sunesimonsen/stylewars/workflows/Checks/badge.svg)](https://github.com/sunesimonsen/stylewars/actions?query=workflow%3AChecks+branch%3Amain)
-[![Bundle Size](https://flat.badgen.net/bundlephobia/minzip/stylewars@1.6.0)](https://bundlephobia.com/result?p=stylewars)
+[![Bundle Size](https://img.badgesize.io/https:/unpkg.com/stylewars@1.7.1/dist/bundle.esm.min.js?label=gzip&compression=gzip)](https://unpkg.com/stylewars@1.7.1/dist/bundle.esm.min.js)
 
 A tiny CSS in JS library that requires no tooling.
 
