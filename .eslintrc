@@ -1,5 +1,5 @@
 {
-  "extends": ["standard", "prettier", "prettier/standard", 'plugin:react/recommended'],
+  "extends": ["standard", "prettier", 'plugin:react/recommended'],
   "plugins": ["import", "mocha", "react", "react-hooks"],
   "globals": {
     "__DEV__": true
