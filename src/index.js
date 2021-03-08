@@ -38,7 +38,7 @@ const insertCss = (css) => {
 };
 
 function stringToHash(string) {
-  var hash = 0;
+  let hash = 0;
 
   let i = string.length;
   while (i) {
@@ -141,7 +141,7 @@ const appendCSSToDocument = (template) => {
 export const css = (strings, ...values) => {
   let template = strings[0];
 
-  for (var i = 0; i < values.length; i++) {
+  for (let i = 0; i < values.length; i++) {
     template += String(values[i]);
     template += strings[i + 1];
   }
