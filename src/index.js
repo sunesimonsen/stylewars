@@ -94,7 +94,7 @@ class CSSTemplate {
       const token = tokens[i];
 
       if (close) {
-        if (token.match(close)) {
+        if (token === close) {
           close = null;
         }
         result += token;
