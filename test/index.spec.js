@@ -22,9 +22,7 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo);
-
-    expect(cn, "to equal snapshot", "c5908582");
+    expect(foo.toString(), "to equal snapshot", "c5908582");
 
     expect(
       document,
@@ -71,9 +69,7 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo);
-
-    expect(cn, "to equal snapshot", "c76beb9ab");
+    expect(foo.toString(), "to equal snapshot", "c76beb9ab");
 
     expect(
       document,
@@ -99,9 +95,7 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo);
-
-    expect(cn, "to equal snapshot", "c66589bb1");
+    expect(foo.toString(), "to equal snapshot", "c66589bb1");
 
     expect(
       document,
@@ -134,9 +128,11 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo, bar, baz, "plain-class");
-
-    expect(cn, "to equal snapshot", "plain-class c5908582 c5bb262d1 c2a4d609c");
+    expect(
+      classes(foo, bar, baz, "plain-class").toString(),
+      "to equal snapshot",
+      "plain-class c5908582 c5bb262d1 c2a4d609c"
+    );
 
     expect(
       document,
@@ -166,7 +162,7 @@ describe("css", () => {
     `;
 
     expect(
-      classes(foo, bar, baz),
+      classes(foo, bar, baz).toString(),
       "to equal snapshot",
       "c5908582 c5bb262d1 c72eebb73"
     );
@@ -185,7 +181,7 @@ describe("css", () => {
     `;
 
     expect(
-      classes(foo, bar, qux),
+      classes(foo, bar, qux).toString(),
       "to equal snapshot",
       "c5908582 c5bb262d1 c70314c25"
     );
@@ -211,7 +207,11 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(foo, bar), "to equal snapshot", "c5908582 c5bb262d1");
+    expect(
+      classes(foo, bar).toString(),
+      "to equal snapshot",
+      "c5908582 c5bb262d1"
+    );
 
     expect(
       document,
@@ -220,7 +220,7 @@ describe("css", () => {
       ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
 
-    expect(classes(bar, foo), "to equal snapshot", "d465928a0");
+    expect(classes(bar, foo).toString(), "to equal snapshot", "d465928a0");
 
     expect(
       document,
@@ -235,7 +235,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(qux, foo), "to equal snapshot", "c103cb0e1c4");
+    expect(classes(qux, foo).toString(), "to equal snapshot", "c103cb0e1c4");
 
     expect(
       document,
@@ -243,6 +243,125 @@ describe("css", () => {
       "to equal snapshot",
       ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.d465928a0 {background: blue;} .d465928a0 {background: red;}.c103cb0e1c4 {background: orange;} .c103cb0e1c4 {background: red;}"
     );
+  });
+
+  describe("when lists of classes is nested", () => {
+    it("reuses classes if they are in the right order in the stylesheet", () => {
+      const foo = css`
+        & {
+          background: red;
+        }
+      `;
+
+      const bar = css`
+        & {
+          background: blue;
+        }
+      `;
+
+      const baz = css`
+        & {
+          background: purple;
+        }
+      `;
+
+      expect(
+        classes(foo, classes(bar, baz)).toString(),
+        "to equal snapshot",
+        "c5908582 c5bb262d1 c72eebb73"
+      );
+
+      expect(
+        document,
+        "to have CSS satisfying",
+        "to equal snapshot",
+        ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}"
+      );
+
+      const qux = css`
+        & {
+          background: orange;
+        }
+      `;
+
+      expect(
+        classes(foo, classes(bar, qux)).toString(),
+        "to equal snapshot",
+        "c5908582 c5bb262d1 c70314c25"
+      );
+
+      expect(
+        document,
+        "to have CSS satisfying",
+        "to equal snapshot",
+        ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}.c70314c25 {background: orange;}"
+      );
+    });
+
+    it("doesn't reuses classes if they are in the wrong order in the stylesheet", () => {
+      const foo = css`
+        & {
+          background: red;
+        }
+      `;
+
+      const bar = css`
+        & {
+          background: blue;
+        }
+      `;
+
+      const baz = css`
+        & {
+          background: purple;
+        }
+      `;
+
+      expect(
+        classes(foo, classes(bar, baz)).toString(),
+        "to equal snapshot",
+        "c5908582 c5bb262d1 c72eebb73"
+      );
+
+      expect(
+        document,
+        "to have CSS satisfying",
+        "to equal snapshot",
+        ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}"
+      );
+
+      expect(
+        classes(classes(bar, foo), baz).toString(),
+        "to equal snapshot",
+        "c1eb9dd1f57c"
+      );
+
+      expect(
+        document,
+        "to have CSS satisfying",
+        "to equal snapshot",
+        ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}.c1eb9dd1f57c {background: blue;} .c1eb9dd1f57c {background: red;} .c1eb9dd1f57c {background: purple;}"
+      );
+
+      const qux = css`
+        & {
+          background: orange;
+        }
+      `;
+
+      expect(
+        classes(foo, qux, classes(bar, baz)).toString(),
+        "to equal snapshot",
+        "c6b2b1cb2756"
+      );
+
+      expect(
+        document,
+        "to have CSS satisfying",
+        "to equal snapshot",
+        ".c5908582 {background: red;}.c5bb262d1 {background: blue;}.c72eebb73 {background: purple;}.c1eb9dd1f57c {background: blue;} .c1eb9dd1f57c {background: red;} .c1eb9dd1f57c {background: purple;}.c6b2b1cb2756 {background: red;} .c6b2b1cb2756 {background: orange;} .c6b2b1cb2756 {background: blue;} .c6b2b1cb2756 {background: purple;}"
+      );
+    });
   });
 
   it("allows conditionals", () => {
@@ -258,7 +377,7 @@ describe("css", () => {
       }
     `;
 
-    const cnTrue = classes(foo, true && bar);
+    const cnTrue = classes(foo, true && bar).toString();
 
     expect(cnTrue, "to equal snapshot", "c5908582 c5bb262d1");
 
@@ -269,7 +388,7 @@ describe("css", () => {
       ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
 
-    const cnFalse = classes(foo, false && bar);
+    const cnFalse = classes(foo, false && bar).toString();
 
     expect(cnFalse, "to equal snapshot", "c5908582");
 
@@ -280,7 +399,7 @@ describe("css", () => {
       ".c5908582 {background: red;}.c5bb262d1 {background: blue;}"
     );
 
-    expect(classes(foo, true && bar), "to equal", cnTrue);
+    expect(classes(foo, true && bar).toString(), "to equal", cnTrue);
 
     expect(
       document,
@@ -297,7 +416,7 @@ describe("css", () => {
       }
     `;
 
-    const cnBlue = classes(withBackground("blue"));
+    const cnBlue = classes(withBackground("blue")).toString();
 
     expect(cnBlue, "to equal snapshot", "c5bb262d1");
 
@@ -308,7 +427,7 @@ describe("css", () => {
       ".c5bb262d1 {background: blue;}"
     );
 
-    const cnRed = classes(withBackground("red"));
+    const cnRed = classes(withBackground("red")).toString();
 
     expect(cnRed, "to equal snapshot", "c5908582");
 
@@ -332,9 +451,7 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo);
-
-    expect(cn, "to equal snapshot", "c6bc3aec1");
+    expect(foo.toString(), "to equal snapshot", "c6bc3aec1");
 
     expect(
       document,
@@ -357,9 +474,7 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo);
-
-    expect(cn, "to equal snapshot", "c7e34b1b5");
+    expect(foo.toString(), "to equal snapshot", "c7e34b1b5");
 
     expect(
       document,
@@ -376,9 +491,7 @@ describe("css", () => {
       }
     `;
 
-    const cn = classes(foo);
-
-    expect(cn, "to equal snapshot", "c6047b53e");
+    expect(foo.toString(), "to equal snapshot", "c6047b53e");
 
     expect(
       document,
@@ -395,7 +508,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(foo), "to equal snapshot", "c5908582");
+    expect(foo.toString(), "to equal snapshot", "c5908582");
 
     const bar = css`
       & {
@@ -403,7 +516,7 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(bar), "to equal snapshot", "c5bb262d1");
+    expect(bar.toString(), "to equal snapshot", "c5bb262d1");
 
     const baz = css`
       & {
@@ -411,6 +524,6 @@ describe("css", () => {
       }
     `;
 
-    expect(classes(baz), "to equal", classes(foo));
+    expect(baz.toString(), "to equal", foo.toString());
   });
 });

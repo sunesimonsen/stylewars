@@ -123,7 +123,7 @@ class CSSTemplate {
   }
 
   toString() {
-    return classes(this);
+    return renderCSS([this]);
   }
 }
 
@@ -171,11 +171,38 @@ const correctlyOrdered = (positions) => {
   return true;
 };
 
+class CSSClasses {
+  constructor(classes) {
+    this._classes = classes;
+  }
+
+  _getClasses() {
+    const classes = [];
+
+    this._classes.forEach((v) => {
+      if (v instanceof CSSClasses) {
+        classes.push(...v._getClasses());
+      } else {
+        classes.push(v);
+      }
+    });
+
+    return classes;
+  }
+
+  toString() {
+    return renderCSS(this._getClasses());
+  }
+}
+
 export const classes = (...args) => {
-  const values = Array.from(args).filter(Boolean);
+  return new CSSClasses(Array.from(args));
+};
+
+const renderCSS = (classes) => {
+  const values = classes.filter(Boolean);
 
   const classNames = values.filter((v) => typeof v === "string");
-
   const templates = values.filter((v) => v instanceof CSSTemplate);
 
   const positions = templates.map(getPosition);
