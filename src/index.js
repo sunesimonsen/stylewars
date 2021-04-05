@@ -88,10 +88,17 @@ class CSSTemplate {
 
     let result = "";
     let close = null;
-    const tokens = this._content.split(/([:;{}&]|\\?["']|\\)/g).filter(Boolean);
+    const tokens = this._content
+      .split(/(&\([^)]+\)|[:;{}&]|\\?["']|\\)/g)
+      .filter(Boolean);
 
     for (let i = 0; i < tokens.length; i++) {
       const token = tokens[i];
+
+      if (token.startsWith("&(") && token.endsWith(")")) {
+        result += `${this._hashString}-${token.slice(2, -1)}`;
+        continue;
+      }
 
       if (close) {
         if (token === close) {

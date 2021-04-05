@@ -140,6 +140,35 @@ const MaybeColoredButton = ({ color, children, ...other }) => (
 );
 ```
 
+### CSS key frames
+
+You can get a hashed identifier with the following syntax: `&(identifier)`. This
+is useful for naming CSS key frames.
+
+```js
+const fadeInStyles = css`
+  & {
+    animation: 750ms linear 0s 1 normal none running &(fade-in);
+  }
+
+  @keyframes &(fade-in) {
+    0%,
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+const FadeInButton = ({ color, children, ...other }) => (
+  <button {...other} class={classes(buttonStyles, fadeInStyles)}>
+    {children}
+  </button>
+);
+```
+
 ### Theming
 
 You just use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
