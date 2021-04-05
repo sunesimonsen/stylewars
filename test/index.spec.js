@@ -526,4 +526,31 @@ describe("css", () => {
 
     expect(baz.toString(), "to equal", foo.toString());
   });
+
+  it("provides hashes identifiers", () => {
+    const foo = css`
+      & {
+        animation: 750ms linear 0s 1 normal none running &(fade-in);
+      }
+
+      @keyframes &(fade-in) {
+        0%,
+        60% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    `;
+
+    expect(foo.toString(), "to equal snapshot", "c68fe167a");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c68fe167a {animation: 750ms linear 0s 1 normal none running c68fe167a-fade-in;}@keyframes c68fe167a-fade-in {0%,60% {opacity: 0;}100% {opacity: 1;}}"
+    );
+  });
 });
