@@ -161,6 +161,7 @@ const fadeInStyles = css`
     }
   }
 }
+`;
 
 const FadeInButton = ({ color, children, ...other }) => (
   <button {...other} class={classes(buttonStyles, fadeInStyles)}>
