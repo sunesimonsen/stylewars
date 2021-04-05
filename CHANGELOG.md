@@ -1,3 +1,7 @@
+### v1.9.0 (2021-04-05)
+
+- [#77](https://github.com/sunesimonsen/stylewars/pull/77) Hashed identifiers ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v1.8.0 (2021-04-05)
 
 #### Pull requests
