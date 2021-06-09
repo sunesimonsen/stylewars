@@ -50,7 +50,7 @@
     "rollup": "^2.27.1",
     "rollup-plugin-terser": "^7.0.2",
     "serve": "^11.3.2",
-    "surge": "^0.22.1",
+    "surge": "^0.23.0",
     "unexpected": "^12.0.0",
     "unexpected-dom": "^5.0.0",
     "unexpected-snapshot": "^1.1.0"
