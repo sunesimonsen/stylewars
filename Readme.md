@@ -44,6 +44,10 @@ import {
 } from "https://unpkg.com/stylewars@1.6.0/dist/bundle.esm.min.js";
 ```
 
+## Minification
+
+You can use the [babel-plugin-stylewars](https://github.com/sunesimonsen/babel-plugin-stylewars) to minify the CSS templates in place.
+
 ## Usage
 
 [See the live examples](https://stylewars.surge.sh/)
