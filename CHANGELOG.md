@@ -1,3 +1,45 @@
+### v1.10.0 (2021-10-27)
+
+#### Pull requests
+
+- [#160](https://github.com/sunesimonsen/stylewars/pull/160) Bump @rollup\/plugin-node-resolve from 11.2.1 to 13.0.6 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#162](https://github.com/sunesimonsen/stylewars/pull/162) Bump offline-github-changelog from 2.3.0 to 2.4.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#163](https://github.com/sunesimonsen/stylewars/pull/163) Bump rollup from 2.58.0 to 2.58.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#156](https://github.com/sunesimonsen/stylewars/pull/156) Bump unexpected-dom from 5.0.0 to 5.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#161](https://github.com/sunesimonsen/stylewars/pull/161) Bump @rollup\/plugin-commonjs from 20.0.0 to 21.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#155](https://github.com/sunesimonsen/stylewars/pull/155) Bump eslint-plugin-import from 2.24.0 to 2.25.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#154](https://github.com/sunesimonsen/stylewars/pull/154) Bump prettier from 2.3.2 to 2.4.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#153](https://github.com/sunesimonsen/stylewars/pull/153) Bump serve from 12.0.0 to 12.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#149](https://github.com/sunesimonsen/stylewars/pull/149) Bump eslint-plugin-react from 7.24.0 to 7.26.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#150](https://github.com/sunesimonsen/stylewars/pull/150) Bump rollup from 2.56.2 to 2.58.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#134](https://github.com/sunesimonsen/stylewars/pull/134) Bump eslint-plugin-import from 2.23.4 to 2.24.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#136](https://github.com/sunesimonsen/stylewars/pull/136) Bump rollup from 2.55.1 to 2.56.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#125](https://github.com/sunesimonsen/stylewars/pull/125) Bump @rollup\/plugin-commonjs from 18.0.0 to 20.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#126](https://github.com/sunesimonsen/stylewars/pull/126) Bump eslint-plugin-promise from 4.3.1 to 5.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#127](https://github.com/sunesimonsen/stylewars/pull/127) Bump prettier from 2.2.1 to 2.3.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#128](https://github.com/sunesimonsen/stylewars/pull/128) Bump eslint-plugin-mocha from 8.1.0 to 9.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#103](https://github.com/sunesimonsen/stylewars/pull/103) Bump serve from 11.3.2 to 12.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#124](https://github.com/sunesimonsen/stylewars/pull/124) Bump jsdom from 16.6.0 to 16.7.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#121](https://github.com/sunesimonsen/stylewars/pull/121) Bump mocha-dominate from 1.0.0 to 2.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#123](https://github.com/sunesimonsen/stylewars/pull/123) Bump unexpected-snapshot from 1.1.1 to 1.2.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#122](https://github.com/sunesimonsen/stylewars/pull/122) Bump eslint from 7.28.0 to 7.32.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#104](https://github.com/sunesimonsen/stylewars/pull/104) Bump eslint-config-prettier from 8.1.0 to 8.3.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#120](https://github.com/sunesimonsen/stylewars/pull/120) Bump rollup from 2.44.0 to 2.55.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#80](https://github.com/sunesimonsen/stylewars/pull/80) Bump surge from 0.22.1 to 0.23.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#102](https://github.com/sunesimonsen/stylewars/pull/102) Bump eslint-config-standard from 16.0.2 to 16.0.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#92](https://github.com/sunesimonsen/stylewars/pull/92) Bump jsdom from 16.5.2 to 16.6.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#96](https://github.com/sunesimonsen/stylewars/pull/96) Bump eslint-plugin-react from 7.23.1 to 7.24.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#99](https://github.com/sunesimonsen/stylewars/pull/99) Bump eslint from 7.23.0 to 7.28.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to main
+
+- [NPM audit](https://github.com/sunesimonsen/stylewars/commit/6ec71ee63f43ead67b3beff5d28bd56bad5558e5) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Reference the babel plugin in the readme](https://github.com/sunesimonsen/stylewars/commit/0f4daf223e318e9185ffd6f0dbca3ee63cc3a08a) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Revert "Upgrade all dev dependencies to latest"](https://github.com/sunesimonsen/stylewars/commit/7ddf0219504a6c9d7b745fdb720b1cfc8659ec4c) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Upgrade all dev dependencies to latest](https://github.com/sunesimonsen/stylewars/commit/d799798cc5417c7b7e96c10db42d0d541c6b769a) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Updated all dev dependencies](https://github.com/sunesimonsen/stylewars/commit/0a6993856cf815297744754be2c6f0496ffbde35) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [+1 more](https://github.com/sunesimonsen/stylewars/compare/v1.9.0...v1.10.0)
+
 ### v1.9.0 (2021-04-05)
 
 - [#77](https://github.com/sunesimonsen/stylewars/pull/77) Hashed identifiers ([Sune Simonsen](mailto:sune@we-knowhow.dk))
