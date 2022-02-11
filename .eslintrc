@@ -17,7 +17,7 @@
       "error",
       {
         "devDependencies": [
-          "**/*.spec.js",
+          "**/*.spec.mjs",
           "rollup.config.js",
         ],
         "optionalDependencies": false,

@@ -1,8 +1,16 @@
-const expect = require("unexpected")
+import unexpected from "unexpected";
+
+import unexpectedDom from "unexpected-dom";
+import unexpectedSnapshot from "unexpected-snapshot";
+import unexpectedPrism from "unexpected-prism";
+
+import { css, classes } from "../src/index.mjs";
+
+const expect = unexpected
   .clone()
-  .use(require("unexpected-dom"))
-  .use(require("unexpected-snapshot"))
-  .use(require("magicpen-prism"))
+  .use(unexpectedDom)
+  .use(unexpectedSnapshot)
+  .use(unexpectedPrism)
   .addAssertion(
     "<DOMDocument> to have CSS satisfying <assertion>",
     (expect, document) => {
@@ -11,8 +19,6 @@ const expect = require("unexpected")
       return expect.shift(style.textContent);
     }
   );
-
-const { css, classes } = require("../src/index");
 
 describe("css", () => {
   it("appends the styles to the body", () => {
