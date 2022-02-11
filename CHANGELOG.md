@@ -1,3 +1,8 @@
+### v2.1.0 (2022-02-11)
+
+- [#188](https://github.com/sunesimonsen/stylewars/pull/188) Bump mocha from 8.4.0 to 9.2.0 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#175](https://github.com/sunesimonsen/stylewars/pull/175) Bump jsdom from 16.7.0 to 19.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
 ### v2.0.0 (2022-02-11)
 
 - [#193](https://github.com/sunesimonsen/stylewars/pull/193) Stop supporting Node 10 \(Major\) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
