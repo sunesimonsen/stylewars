@@ -1,3 +1,21 @@
+### v2.0.0 (2022-02-11)
+
+- [#193](https://github.com/sunesimonsen/stylewars/pull/193) Stop supporting Node 10 \(Major\) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#192](https://github.com/sunesimonsen/stylewars/pull/192) Bump rollup from 2.67.1 to 2.67.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#191](https://github.com/sunesimonsen/stylewars/pull/191) Bump rollup from 2.64.0 to 2.67.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#183](https://github.com/sunesimonsen/stylewars/pull/183) Bump eslint-plugin-promise from 5.1.1 to 5.2.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#184](https://github.com/sunesimonsen/stylewars/pull/184) Bump eslint-plugin-mocha from 9.0.0 to 10.0.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#185](https://github.com/sunesimonsen/stylewars/pull/185) Bump surge from 0.23.0 to 0.23.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#178](https://github.com/sunesimonsen/stylewars/pull/178) Bump prettier from 2.4.1 to 2.5.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#181](https://github.com/sunesimonsen/stylewars/pull/181) Bump rollup from 2.59.0 to 2.64.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#179](https://github.com/sunesimonsen/stylewars/pull/179) Bump @rollup\/plugin-node-resolve from 13.0.6 to 13.1.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#169](https://github.com/sunesimonsen/stylewars/pull/169) Bump eslint-plugin-react-hooks from 4.2.0 to 4.3.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#177](https://github.com/sunesimonsen/stylewars/pull/177) Bump eslint-plugin-import from 2.25.2 to 2.25.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#176](https://github.com/sunesimonsen/stylewars/pull/176) Bump eslint-plugin-react from 7.26.1 to 7.28.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#167](https://github.com/sunesimonsen/stylewars/pull/167) Bump rollup from 2.58.3 to 2.59.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#168](https://github.com/sunesimonsen/stylewars/pull/168) Bump serve from 12.0.1 to 13.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#164](https://github.com/sunesimonsen/stylewars/pull/164) Bump eslint-plugin-promise from 5.1.0 to 5.1.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
 ### v1.10.0 (2021-10-27)
 
 #### Pull requests
