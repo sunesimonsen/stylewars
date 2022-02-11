@@ -17,7 +17,7 @@ const minifyPlugins = [
 
 export default [
   {
-    input: "src/index.js",
+    input: "src/index.mjs",
     output: {
       file: "dist/bundle.cjs.js",
       format: "cjs",
@@ -25,7 +25,7 @@ export default [
     plugins,
   },
   {
-    input: "src/index.js",
+    input: "src/index.mjs",
     output: {
       file: "dist/bundle.esm.js",
       format: "esm",
@@ -33,7 +33,7 @@ export default [
     plugins,
   },
   {
-    input: "src/index.js",
+    input: "src/index.mjs",
     output: {
       file: "dist/bundle.cjs.min.js",
       format: "cjs",
@@ -41,7 +41,7 @@ export default [
     plugins: plugins.concat(minifyPlugins),
   },
   {
-    input: "src/index.js",
+    input: "src/index.mjs",
     output: {
       file: "dist/bundle.esm.min.js",
       format: "esm",
