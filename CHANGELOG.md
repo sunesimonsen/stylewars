@@ -1,3 +1,28 @@
+### v2.1.1 (2022-12-18)
+
+#### Pull requests
+
+- [#230](https://github.com/sunesimonsen/stylewars/pull/230) Bump unexpected-dom from 5.0.1 to 5.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#231](https://github.com/sunesimonsen/stylewars/pull/231) Bump unexpected-snapshot from 1.2.0 to 2.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#205](https://github.com/sunesimonsen/stylewars/pull/205) Bump eslint-config-prettier from 8.4.0 to 8.5.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#214](https://github.com/sunesimonsen/stylewars/pull/214) Bump prettier from 2.5.1 to 2.6.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#217](https://github.com/sunesimonsen/stylewars/pull/217) Bump mocha from 9.2.1 to 10.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#221](https://github.com/sunesimonsen/stylewars/pull/221) Bump eslint-plugin-react from 7.29.0 to 7.30.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#225](https://github.com/sunesimonsen/stylewars/pull/225) Bump rollup from 2.68.0 to 2.75.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#202](https://github.com/sunesimonsen/stylewars/pull/202) Bump eslint-plugin-react from 7.28.0 to 7.29.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#199](https://github.com/sunesimonsen/stylewars/pull/199) Bump unexpected from 12.0.3 to 12.0.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#200](https://github.com/sunesimonsen/stylewars/pull/200) Bump rollup from 2.67.3 to 2.68.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#201](https://github.com/sunesimonsen/stylewars/pull/201) Bump @rollup\/plugin-commonjs from 21.0.1 to 21.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#196](https://github.com/sunesimonsen/stylewars/pull/196) Bump rollup from 2.67.2 to 2.67.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#197](https://github.com/sunesimonsen/stylewars/pull/197) Bump eslint-config-prettier from 8.3.0 to 8.4.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#198](https://github.com/sunesimonsen/stylewars/pull/198) Bump mocha from 9.2.0 to 9.2.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#194](https://github.com/sunesimonsen/stylewars/pull/194) Bump eslint-plugin-promise from 5.2.0 to 6.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#195](https://github.com/sunesimonsen/stylewars/pull/195) Bump rollup from 2.64.0 to 2.67.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to main
+
+- [Updated examples](https://github.com/sunesimonsen/stylewars/commit/5f302cbbcd7db6e0afe6203abb4b483e523940ac) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.1.0 (2022-02-11)
 
 - [#188](https://github.com/sunesimonsen/stylewars/pull/188) Bump mocha from 8.4.0 to 9.2.0 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
