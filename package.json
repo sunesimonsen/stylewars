@@ -6,8 +6,8 @@
   "module": "dist/bundle.esm.js",
   "scripts": {
     "test": "mocha",
-    "lint": "eslint . && prettier --check '**/*.{js,md,json}'",
-    "format": "prettier --write **/*.{md,js,json}",
+    "lint": "eslint '**/*.{js,mjs}' && prettier --check '**/*.{js,mjs,md,json}'",
+    "format": "prettier --write **/*.{md,js,mjs,json}",
     "build": "rollup -c rollup.config.js",
     "preversion": "npm run lint && npm run test",
     "prepublishOnly": "npm run build",
@@ -15,11 +15,7 @@
     "start": "serve example",
     "example:deploy": "surge example stylewars.surge.sh"
   },
-  "keywords": [
-    "css",
-    "css-in-js",
-    "styles"
-  ],
+  "keywords": ["css", "css-in-js", "styles"],
   "author": "Sune Simonsen",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/stylewars/issues",
@@ -32,14 +28,8 @@
     "@rollup/plugin-node-resolve": "^13.0.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-mocha": "^10.0.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.1.0",
-    "eslint-plugin-standard": "^5.0.0",
     "jsdom": "^19.0.0",
     "magicpen-prism": "^5.0.0",
     "mocha": "^10.0.0",

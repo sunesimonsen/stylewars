@@ -1,18 +1,15 @@
 {
-  "extends": ["standard", "prettier", 'plugin:react/recommended'],
-  "plugins": ["import", "mocha", "react", "react-hooks"],
+  "extends": ["prettier", "eslint:recommended"],
+  "plugins": ["import", "mocha"],
   "globals": {
     "__DEV__": true
   },
   "env": {
+    "es6": true,
     "mocha": true,
     "browser": true
   },
   "rules": {
-    "react/prop-types": 0,
-    "react/jsx-uses-vars": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -27,5 +24,9 @@
     "mocha/no-exclusive-tests": "error",
     "mocha/no-nested-tests": "error",
     "mocha/no-identical-title": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   }
 }
