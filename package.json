@@ -15,7 +15,11 @@
     "start": "serve example",
     "example:deploy": "surge example stylewars.surge.sh"
   },
-  "keywords": ["css", "css-in-js", "styles"],
+  "keywords": [
+    "css",
+    "css-in-js",
+    "styles"
+  ],
   "author": "Sune Simonsen",
   "license": "MIT",
   "bugs": "https://github.com/sunesimonsen/stylewars/issues",
@@ -26,10 +30,10 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-mocha": "^10.0.3",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
     "jsdom": "^19.0.0",
     "magicpen-prism": "^5.0.0",
     "mocha": "^10.0.0",
