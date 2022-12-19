@@ -38,7 +38,7 @@
     "magicpen-prism": "^5.0.0",
     "mocha": "^10.0.0",
     "mocha-dominate": "^2.0.0",
-    "offline-github-changelog": "^2.2.0",
+    "offline-github-changelog": "^3.0.1",
     "prettier": "^2.3.2",
     "rollup": "^2.55.1",
     "rollup-plugin-terser": "^7.0.2",
