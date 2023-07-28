@@ -45,7 +45,7 @@
     "serve": "^14.1.2",
     "surge": "^0.23.1",
     "unexpected": "^13.0.1",
-    "unexpected-dom": "^5.1.0",
+    "unexpected-dom": "^6.0.0",
     "unexpected-prism": "^0.1.0",
     "unexpected-snapshot": "^2.1.0"
   },
