@@ -224,7 +224,7 @@ const renderCSS = (classes) => {
     });
   } else {
     const template = templates.reduce((combined, template) =>
-      combined._combine(template)
+      combined._combine(template),
     );
 
     if (!getPosition(template)) {
