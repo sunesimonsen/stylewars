@@ -1,3 +1,7 @@
+### v2.2.2 (2023-12-18)
+
+- [Change type to module](https://github.com/sunesimonsen/stylewars/commit/8abf4f0a9cfb316f7ba172f60038b7e6048bda09) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.2.1 (2023-12-18)
 
 - [Fix exports](https://github.com/sunesimonsen/stylewars/commit/d794890836caddb7548c520906a5dca8c0df4a73) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
