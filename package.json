@@ -4,6 +4,10 @@
   "description": "A tiny CSS in JS library that requires no tooling",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
+  "exports": {
+    "import": "dist/bundle.esm.js",
+    "require": "dist/bundle.cjs.js"
+  },
   "scripts": {
     "test": "mocha",
     "lint": "eslint '**/*.{js,mjs}' && prettier --check '**/*.{js,mjs,md,json}'",
