@@ -64,21 +64,30 @@ class CSSTemplate {
     this._content = content;
     this._hash = hash;
     this._rendered = null;
+  }
 
-    const hashes = getHashes();
+  get _hashString() {
+    if (!this.cachedHashString) {
+      const hashes = getHashes();
 
-    while (hashes.has(this._hash) && hashes.get(this._hash) !== content) {
-      this._hash++;
+      while (
+        hashes.has(this._hash) &&
+        hashes.get(this._hash) !== this._content
+      ) {
+        this._hash++;
+      }
+
+      if (!hashes.has(this._hash)) {
+        hashes.set(this._hash, this._content);
+      }
+
+      const hashString = Math.abs(this._hash).toString(16);
+      this._cachedHashString = hashString.match(/^[0-9]/)
+        ? `c${hashString}`
+        : hashString;
     }
 
-    if (!hashes.has(this._hash)) {
-      hashes.set(this._hash, content);
-    }
-
-    const hashString = Math.abs(this._hash).toString(16);
-    this._hashString = hashString.match(/^[0-9]/)
-      ? `c${hashString}`
-      : hashString;
+    return this._cachedHashString;
   }
 
   _render() {
