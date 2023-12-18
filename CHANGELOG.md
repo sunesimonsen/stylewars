@@ -1,3 +1,55 @@
+### v2.2.0 (2023-12-18)
+
+#### Pull requests
+
+- [#322](https://github.com/sunesimonsen/stylewars/pull/322) Correctly export ESM ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#312](https://github.com/sunesimonsen/stylewars/pull/312) Bump @rollup\/plugin-commonjs from 25.0.4 to 25.0.7 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#311](https://github.com/sunesimonsen/stylewars/pull/311) Bump prettier from 3.0.2 to 3.0.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#310](https://github.com/sunesimonsen/stylewars/pull/310) Bump eslint-plugin-mocha from 10.1.0 to 10.2.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#300](https://github.com/sunesimonsen/stylewars/pull/300) Bump serve from 14.2.0 to 14.2.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#306](https://github.com/sunesimonsen/stylewars/pull/306) Bump @rollup\/plugin-node-resolve from 15.1.0 to 15.2.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#308](https://github.com/sunesimonsen/stylewars/pull/308) Bump eslint from 8.47.0 to 8.52.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#309](https://github.com/sunesimonsen/stylewars/pull/309) Bump eslint-plugin-import from 2.28.0 to 2.29.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#294](https://github.com/sunesimonsen/stylewars/pull/294) Bump eslint-config-prettier from 8.9.0 to 9.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#296](https://github.com/sunesimonsen/stylewars/pull/296) Bump @rollup\/plugin-commonjs from 25.0.3 to 25.0.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#295](https://github.com/sunesimonsen/stylewars/pull/295) Bump eslint from 8.46.0 to 8.47.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#297](https://github.com/sunesimonsen/stylewars/pull/297) Bump prettier from 3.0.0 to 3.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#289](https://github.com/sunesimonsen/stylewars/pull/289) Bump eslint from 8.45.0 to 8.46.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#290](https://github.com/sunesimonsen/stylewars/pull/290) Bump eslint-plugin-import from 2.27.5 to 2.28.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#291](https://github.com/sunesimonsen/stylewars/pull/291) Bump unexpected from 13.2.0 to 13.2.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#282](https://github.com/sunesimonsen/stylewars/pull/282) Bump prettier from 2.8.8 to 3.0.0 ([Sune Simonsen](mailto:sune@we-knowhow.dk), [dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#286](https://github.com/sunesimonsen/stylewars/pull/286) Bump unexpected from 13.1.0 to 13.2.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#287](https://github.com/sunesimonsen/stylewars/pull/287) Bump unexpected-dom from 5.1.0 to 6.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#288](https://github.com/sunesimonsen/stylewars/pull/288) Bump eslint-config-prettier from 8.8.0 to 8.9.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#284](https://github.com/sunesimonsen/stylewars/pull/284) Bump @rollup\/plugin-commonjs from 25.0.0 to 25.0.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#283](https://github.com/sunesimonsen/stylewars/pull/283) Bump eslint from 8.42.0 to 8.45.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#285](https://github.com/sunesimonsen/stylewars/pull/285) Bump word-wrap from 1.2.3 to 1.2.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#269](https://github.com/sunesimonsen/stylewars/pull/269) Bump prettier from 2.8.3 to 2.8.8 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#273](https://github.com/sunesimonsen/stylewars/pull/273) Bump @rollup\/plugin-commonjs from 24.0.1 to 25.0.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#276](https://github.com/sunesimonsen/stylewars/pull/276) Bump @rollup\/plugin-node-resolve from 15.0.1 to 15.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#277](https://github.com/sunesimonsen/stylewars/pull/277) Bump eslint from 8.36.0 to 8.42.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#260](https://github.com/sunesimonsen/stylewars/pull/260) Bump eslint from 8.30.0 to 8.36.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#254](https://github.com/sunesimonsen/stylewars/pull/254) Bump serve from 14.1.2 to 14.2.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#255](https://github.com/sunesimonsen/stylewars/pull/255) Bump eslint-plugin-import from 2.26.0 to 2.27.5 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#262](https://github.com/sunesimonsen/stylewars/pull/262) Bump eslint-config-prettier from 8.5.0 to 8.8.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#243](https://github.com/sunesimonsen/stylewars/pull/243) Bump mocha from 10.0.0 to 10.2.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#247](https://github.com/sunesimonsen/stylewars/pull/247) Bump json5 from 1.0.1 to 1.0.2 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#246](https://github.com/sunesimonsen/stylewars/pull/246) Bump unexpected from 13.0.1 to 13.1.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#250](https://github.com/sunesimonsen/stylewars/pull/250) Bump prettier from 2.6.2 to 2.8.3 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#252](https://github.com/sunesimonsen/stylewars/pull/252) Bump @rollup\/plugin-commonjs from 21.0.2 to 24.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#241](https://github.com/sunesimonsen/stylewars/pull/241) Bump ejs and offline-github-changelog ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#240](https://github.com/sunesimonsen/stylewars/pull/240) Audit fix ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#239](https://github.com/sunesimonsen/stylewars/pull/239) Streamline Github Actions with other projects I own ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#238](https://github.com/sunesimonsen/stylewars/pull/238) Bump @rollup\/plugin-node-resolve from 13.1.3 to 15.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
+#### Commits to main
+
+- [Fix animation example](https://github.com/sunesimonsen/stylewars/commit/9364a4b7fa04d978bba5f76cec9473b0e9aa9723) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Upgrade serve and surge](https://github.com/sunesimonsen/stylewars/commit/e06950a27acf8ba41f64ea0c410179d977f558e5) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Upgrade unexpected](https://github.com/sunesimonsen/stylewars/commit/f05d91a8f97560e4c166b97e08dee9a414c1ec6d) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Upgrade eslint](https://github.com/sunesimonsen/stylewars/commit/2c8f287a69fe51ede92bb46b9555422f925e9a9e) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [Fix linting](https://github.com/sunesimonsen/stylewars/commit/24e17d5e9942e850b9a29d34cc1becfc585b8ca2) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.1.1 (2022-12-18)
 
 #### Pull requests
@@ -90,7 +142,7 @@
 
 ### v1.9.0 (2021-04-05)
 
-- [#77](https://github.com/sunesimonsen/stylewars/pull/77) Hashed identifiers ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#77](https://github.com/sunesimonsen/stylewars/pull/77) Hashed identifiers ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 ### v1.8.0 (2021-04-05)
 
@@ -196,7 +248,7 @@
 
 #### Pull requests
 
-- [#6](https://github.com/sunesimonsen/stylewars/pull/6) Take care of hash collision ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#6](https://github.com/sunesimonsen/stylewars/pull/6) Take care of hash collision ([Sune Simonsen](mailto:sune@we-knowhow.dk), [Sune Simonsen](mailto:sune@we-knowhow.dk))
 
 #### Commits to main
 
