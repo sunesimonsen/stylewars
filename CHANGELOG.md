@@ -1,3 +1,7 @@
+### v2.2.1 (2023-12-18)
+
+- [Fix exports](https://github.com/sunesimonsen/stylewars/commit/d794890836caddb7548c520906a5dca8c0df4a73) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.2.0 (2023-12-18)
 
 #### Pull requests
