@@ -1,3 +1,7 @@
+### v2.3.0 (2023-12-18)
+
+- [Request the document lazily](https://github.com/sunesimonsen/stylewars/commit/0049ac9b8d4aea87eab5e7fc8c3b02b301298dc4) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.2.2 (2023-12-18)
 
 - [Change type to module](https://github.com/sunesimonsen/stylewars/commit/8abf4f0a9cfb316f7ba172f60038b7e6048bda09) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
