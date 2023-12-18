@@ -5,8 +5,8 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "exports": {
-    "import": "dist/bundle.esm.js",
-    "require": "dist/bundle.cjs.js"
+    "import": "./dist/bundle.esm.js",
+    "require": "./dist/bundle.cjs.js"
   },
   "scripts": {
     "test": "mocha",
