@@ -98,15 +98,20 @@ class CSSTemplate {
     let result = "";
     let close = null;
     const tokens = this._content
-      .split(/(&\([^)]+\)|[:;{}&]|\\?["']|\\)/g)
+      .split(/(&\([^)]+\)|@media|[:;{}&]|\\?["']|\\)/g)
       .filter(Boolean);
 
+    let inMediaRule = false;
     for (let i = 0; i < tokens.length; i++) {
       const token = tokens[i];
 
       if (token.startsWith("&(") && token.endsWith(")")) {
         result += `${this._hashString}-${token.slice(2, -1)}`;
         continue;
+      }
+
+      if (token === "@media") {
+        inMediaRule = true;
       }
 
       if (close) {
@@ -117,7 +122,11 @@ class CSSTemplate {
         continue;
       }
 
-      close = pairs[token];
+      if (inMediaRule && token === "{") {
+        inMediaRule = false;
+      } else {
+        close = pairs[token];
+      }
 
       if (close) {
         result += token;

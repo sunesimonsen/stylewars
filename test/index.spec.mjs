@@ -507,6 +507,29 @@ describe("css", () => {
     );
   });
 
+  it("supports media queries", () => {
+    const foo = css`
+      & {
+        background: red;
+      }
+
+      @media only screen and (width <= 1000px) {
+        & {
+          background: green;
+        }
+      }
+    `;
+
+    expect(foo.toString(), "to equal snapshot", "c4212962c");
+
+    expect(
+      document,
+      "to have CSS satisfying",
+      "to equal snapshot",
+      ".c4212962c {background: red;}@media only screen and (width <= 1000px) {.c4212962c {background: green;}}",
+    );
+  });
+
   it("returns a hash of the content", () => {
     const foo = css`
       & {
