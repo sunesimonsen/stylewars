@@ -1,3 +1,11 @@
+### v2.4.0 (2024-01-18)
+
+- [#329](https://github.com/sunesimonsen/stylewars/pull/329) Support media queries ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+- [#318](https://github.com/sunesimonsen/stylewars/pull/318) Bump unexpected-dom from 6.0.0 to 6.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#315](https://github.com/sunesimonsen/stylewars/pull/315) Bump magicpen-prism from 5.0.0 to 5.0.1 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#323](https://github.com/sunesimonsen/stylewars/pull/323) Bump eslint from 8.52.0 to 8.56.0 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+- [#328](https://github.com/sunesimonsen/stylewars/pull/328) Bump prettier from 3.0.3 to 3.2.4 ([dependabot[bot]](mailto:49699333+dependabot[bot]@users.noreply.github.com))
+
 ### v2.3.0 (2023-12-18)
 
 - [Request the document lazily](https://github.com/sunesimonsen/stylewars/commit/0049ac9b8d4aea87eab5e7fc8c3b02b301298dc4) ([Sune Simonsen](mailto:sune@we-knowhow.dk))
