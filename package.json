@@ -6,9 +6,11 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "exports": {
+    "types": "./types/index.d.ts",
     "import": "./dist/bundle.esm.js",
     "require": "./dist/bundle.cjs.js"
   },
+  "types": "./types/index.d.ts",
   "scripts": {
     "test": "mocha",
     "lint": "eslint '**/*.{js,mjs}' && prettier --check '**/*.{js,mjs,md,json}'",
