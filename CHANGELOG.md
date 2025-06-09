@@ -1,3 +1,7 @@
+### v2.5.0 (2025-06-09)
+
+- [#336](https://github.com/sunesimonsen/stylewars/pull/336) Add TypeScript definitions ([Sune Simonsen](mailto:sune@we-knowhow.dk))
+
 ### v2.4.0 (2024-01-18)
 
 - [#329](https://github.com/sunesimonsen/stylewars/pull/329) Support media queries ([Sune Simonsen](mailto:sune@we-knowhow.dk))
